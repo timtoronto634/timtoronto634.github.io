@@ -8,3 +8,21 @@ h1 {
     letter-spacing: 1px;
 
 }
+.top-profile{
+    text-align: center;
+}
+.myself-img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.project1 {
+    text-align: center;
+    background-color: lightgrey;
+    padding: 10px;
+}
+.project2 {
+    text-align: center;
+    padding: 10px;
+}
