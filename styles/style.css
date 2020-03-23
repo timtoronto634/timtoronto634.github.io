@@ -46,3 +46,15 @@ h1 {
     width: 100px;
     height: 100px;
 }
+ul {
+    text-align: center;
+    list-style-position: inside;
+}
+.category{
+    text-align: center;
+}
+.category_title{
+    font-size: 30px;
+    font-weight: bold;
+    background-color: rgba(0, 0, 255, 0.397);
+}
