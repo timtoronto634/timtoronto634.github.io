@@ -1,4 +1,4 @@
-h1 {
+/* h1 {
     margin: 0;
     padding: 20px 0;
     color: dimgrey;
@@ -7,10 +7,22 @@ h1 {
     text-align: center;
     letter-spacing: 1px;
 
+} */
+.general-info {
+    display: flex;
 }
-.top-profile{
+.name-job-title {
+    flex: 1;
+}
+.contact-info {
+    flex: 1;
+    text-align: right;
+    line-height: 1;
+}
+
+.img-container {
     text-align: center;
-}
+  }
 .myself-img {
     width: 200px;
     height: 200px;
@@ -46,15 +58,23 @@ h1 {
     width: 100px;
     height: 100px;
 }
-ul {
-    text-align: center;
-    list-style-position: inside;
-}
 .category{
-    text-align: center;
+    text-align: left;
 }
 .category_title{
-    font-size: 30px;
+    color: blue;
     font-weight: bold;
-    background-color: rgba(0, 0, 255, 0.397);
+    text-transform: uppercase;
+
+    font-size: 30px;
+    /* background-color: rgba(0, 0, 255, 0.397); */
+}
+
+
+
+.position-period {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex: 1;
 }

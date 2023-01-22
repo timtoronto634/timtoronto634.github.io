@@ -8,15 +8,81 @@
     <link rel="stylesheet" href="styles/style.css" type="text/css">
 </head>
 <body>
-    <div class="top-profile">
-        <h1>Atsuhiro Uchida</h1>
+    <div class="general-info">
+        <div class="name-job-title">
+            <div class="name">
+                Atsuhiro Uchida
+            </div>
+            <div class="job-title">
+                Software Engineer
+            </div>
+        </div>
+        <div class="contact-info">
+            <p>Tokyo, Japan</p>
+            <p>atsuhiro.uchida.a2@gmail.com</p>
+            <p>https://www.linkedin.com/in/atsuhiro-uchida/</p>
+            <p>https://github.com/timtoronto634</p>
+        </div>
+
+    </div>
+    <div class="img-container">
         <img src="images/Myself.jpg" alt="image of Atsuhiro" width="200px" height="200px" class="myself-img">
     </div>
+
+    <div class="career-summary">
+        Junior Software Engineer with 2 years experience implementing backend of distributed systems in Ruby/Golang;
+Developed features on top of Japanese No.1 cloud accounting product with 10+ history and 7M+ traffic, each feature
+released within 3-4 months including time of writing and reviewing DesignDoc
+    </div>
+
     <div class="category">
         <div class="category_title">
-            Notable Projects
+            Work Experience
         </div>
-        <div class="project">
+
+        <div class="section">
+            <div class="company">
+                freee Inc.
+            </div>
+            <!-- first position -->
+            <span class="position-period">
+                <span class="position">Backend Developer - Ruby/Golang</span>
+                <span class="period">April 2022 - current</span>
+            </span>
+            <div class="Impacts">
+                <ul>
+                    <li>Engineered a workflow of reusing assets of selenium over different timing by temporarily storing browser
+                        profile to AWS S3 to save user’s image-auth step, bumping sync success rate from 45% to 70%
+                        </li>
+                    <li>Led a team of 2  to introduce Amazon elasticache for a specific DB request , contributed to reducing peak DB load from 90% to 10%
+                    </li>
+                    <li>
+                        Re-engineered team’s complex code to divide database transactions into two so that each transaction is for different database nodes, helping DBRE team prepare for vertical sharding of largest product’s database
+                    </li>
+                    <li>Organized the whole operation and documentation of contacting users about incidents by saving analysis query in a reusable form and by building a criteria of informing the executives of incidents; the total time is shortened from 2 months to 2 weeks, resolving team’s performance bottleneck</li>
+                </ul>
+            </div>
+            
+            <!-- second position -->
+            <span class="position-period">
+                <span class="position">Data Aggregation Developer - Ruby</span>
+                <span class="period">April 2021 - March 2022</span>
+            </span>
+            <div class="Impacts">
+                <ul>
+                    <li>Implemented backend of a new e-commerce selling detail upload function as a recovery for sync feature down for 4 months, after argument of business impact trade-off with the executives; released in time for 1000+ users to create a tax return</li>
+                    <li>Delivered additional follow-up features after release, Strengthened users’ experience; Scoped users’ action log, hypothesized what is confusing; Received positive feedback from users on a fool-proof aspect</li>
+                    <li>Diagnosed complex systems of e-commerce company in design doc before development; Suppressing number of critical bugs to be zero for 1+ year</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- <div class="category">
+        <div class="category_title">
+            Work Experience
+        </div>
+        <div class="Impacts">
             <div class="project_name">
                 <h3>Group Feeback</h3>
             </div>
@@ -109,7 +175,7 @@
             
             </ul>
         </div>
-    </div>
+    </div> -->
     <scripts src="scripts/main.js"></scripts>
 </body>
 </html>
