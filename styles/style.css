@@ -1,13 +1,27 @@
-/* h1 {
+html {
     margin: 0;
-    padding: 20px 0;
-    color: dimgrey;
-    text-shadow: 2px 2px 1px black;
-    font-size: 60px;
-    text-align: center;
-    letter-spacing: 1px;
+    padding: 0;
+  }
+  
+body {
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
 
-} */
+.name {
+    font-size: 36px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+
+.job-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
 .general-info {
     display: flex;
 }
@@ -29,35 +43,11 @@
     object-fit: cover;
     border-radius: 50%;
 }
-.project_title {
-    text-align: center;
-    padding: 0%;
+
+.career-summary {
+    margin-bottom: 10px;
 }
-.project {
-    text-align: center;
-    padding: 10px;
-}
-.project1 {
-    text-align: center;
-    background-color: lightgrey;
-    padding: 10px;
-}
-.project2 {
-    text-align: center;
-    padding: 10px;
-}
-.btn-square {
-    padding: 5px;
-    background-color: #668ad7;
-    color: antiquewhite;
-    border-bottom: solid 4px #627295;
-    border-radius: 3px;
-}
-.technology_logo {
-    padding: 5px;
-    width: 100px;
-    height: 100px;
-}
+
 .category{
     text-align: left;
 }
@@ -70,11 +60,19 @@
     /* background-color: rgba(0, 0, 255, 0.397); */
 }
 
-
+.organization {
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: underline;
+}
 
 .position-period {
     display: flex;
     align-items: center;
     justify-content: space-between;
     flex: 1;
+}
+
+.position {
+    font-size: 18px;
 }
