@@ -7,6 +7,8 @@ body {
     padding: 10px;
     padding-left: 20px;
     padding-right: 20px;
+    color: green;
+    background-color: black;
 }
 
 .name {
@@ -52,7 +54,7 @@ body {
     text-align: left;
 }
 .category_title{
-    color: blue;
+    color: grey;
     font-weight: bold;
     text-transform: uppercase;
 
