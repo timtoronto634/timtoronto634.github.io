@@ -7,8 +7,13 @@ body {
     padding: 10px;
     padding-left: 20px;
     padding-right: 20px;
-    color: green;
-    background-color: black;
+    /* color: green;
+    background-color: black; */
+}
+
+.main_body{
+  max-width: 75%;
+  margin: auto;
 }
 
 .name {
