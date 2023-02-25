@@ -35,10 +35,19 @@ body {
 .name-job-title {
     flex: 1;
 }
-.contact-info {
+.contacts {
     flex: 1;
-    text-align: right;
+    display: flex;
+    /* text-align: right; */
     line-height: 1;
+}
+.contact-info {
+  padding-right: 10px;
+}
+
+.resumes {
+  padding-top: 10px;
+  font-size: 20px;
 }
 
 .img-container {
