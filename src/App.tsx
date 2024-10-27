@@ -1,34 +1,56 @@
 import { useState } from 'react'
-// import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
+import Portfolio from './Portfolio'
+import { Box, Drawer, List, ListItem, ListItemText } from '@mui/material'
+
+const drawerWidth = 240;
+const menuItems = ['home', 'work', 'Education', 'Skills', 'Blogs'];
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [selectedMenu, setSelectedMenu] = useState('home')
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        {/* <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a> */}
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <Box sx={{ display: 'flex' }}>
+      {/* Sidebar */}
+      <Drawer
+        variant="permanent"
+        sx={{
+          width: drawerWidth,
+          flexShrink: 0,
+          '& .MuiDrawer-paper': {
+            width: drawerWidth,
+            boxSizing: 'border-box',
+            backgroundColor: '#4A90E2',
+            color: 'white'
+          },
+        }}
+      >
+        <List sx={{ mt: 2 }}>
+          {menuItems.map((text) => (
+            <ListItem 
+              key={text}
+              sx={{
+                backgroundColor: text === selectedMenu ? '#F4A460' : 'transparent',
+                borderRadius: 1,
+                mx: 1,
+                '&:hover': {
+                  backgroundColor: text === selectedMenu ? '#F4A460' : 'rgba(255, 255, 255, 0.1)',
+                }
+              }}
+              onClick={() => setSelectedMenu(text)}
+            >
+              <ListItemText primary={text} />
+            </ListItem>
+          ))}
+        </List>
+      </Drawer>
+
+      {/* Main content */}
+      <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
+        {selectedMenu === "home" && <Portfolio />}
+        {selectedMenu === "work" && <Portfolio />}
+      </Box>
+    </Box>
   )
 }
 
