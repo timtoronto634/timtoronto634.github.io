@@ -10,7 +10,6 @@
     "moduleResolution": "Bundler",
     "allowImportingTsExtensions": true,
     "isolatedModules": true,
-    "moduleDetection": "force",
     "noEmit": true,
     "jsx": "react-jsx",
 
@@ -19,7 +18,20 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
-    "noUncheckedSideEffectImports": true
+
+    /* additional */
+    "resolveJsonModule": true,
+    "baseUrl": "./", // vite-tsconfig-paths
+    "paths": { "@/*": ["./src/*"] }, // vite-tsconfig-paths
+    "pretty": true,
+    "newLine": "lf",
+    "stripInternal": true,
+    "noImplicitOverride": true,
+    "noUncheckedIndexedAccess": true,
+    "noPropertyAccessFromIndexSignature": true,
+    "noEmitOnError": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolvePackageJsonExports": false
   },
   "include": ["src"]
 }
