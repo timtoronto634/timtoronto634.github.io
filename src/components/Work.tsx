@@ -47,7 +47,7 @@ export const Impacts: React.FC<ImpactsProps> = ({ items }) => (
 );
 
 // Example usage
-const WorkExperienceSection: React.FC = () => {
+const Work: React.FC = () => {
   const impacts = [
     "Led the design, infrastructure setup, and backend development for new product launches",
     "Guided the service team by articulating user value and identifying minimum requirements, minimizing time to delivery",
@@ -64,4 +64,4 @@ const WorkExperienceSection: React.FC = () => {
   );
 };
 
-export default WorkExperienceSection;
+export default Work;

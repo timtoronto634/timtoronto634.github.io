@@ -1,13 +1,20 @@
 import { useState } from 'react'
 import './App.css'
-import Portfolio from './Portfolio'
+import Work from './components/Work'
 import { Box, Drawer, List, ListItem, ListItemText } from '@mui/material'
+import { Home } from './components/Home'
+import { Education } from './components/Education'
+import { Skills } from './components/Skills'
+import { Blogs } from './components/Blogs'
+import { Languages } from './components/Languages'
+
+type MenuItem = 'Home' | 'Work' | 'Education' | 'Skills' | 'Blogs' | 'Languages'
 
 const drawerWidth = 240;
-const menuItems = ['home', 'work', 'Education', 'Skills', 'Blogs'];
+const menuItems: MenuItem[] = ['Home', 'Work', 'Education', 'Skills', 'Blogs', 'Languages'];
 
 function App() {
-  const [selectedMenu, setSelectedMenu] = useState('home')
+  const [selectedMenu, setSelectedMenu] = useState<MenuItem>('Home')
 
   return (
     <Box sx={{ display: 'flex' }}>
@@ -47,8 +54,12 @@ function App() {
 
       {/* Main content */}
       <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
-        {selectedMenu === "home" && <Portfolio />}
-        {selectedMenu === "work" && <Portfolio />}
+        {selectedMenu === "Home" && <Home />}
+        {selectedMenu === "Work" && <Work />}
+        {selectedMenu === "Education" && <Education />}
+        {selectedMenu === "Skills" && <Skills />}
+        {selectedMenu === "Blogs" && <Blogs />}
+        {selectedMenu === "Languages" && <Languages />}
       </Box>
     </Box>
   )
