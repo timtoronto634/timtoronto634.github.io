@@ -1,7 +1,3 @@
 export const Languages = () => {
-    return (
-        <div>
-            Languages
-        </div>
-    )
-}
+  return <div>Languages</div>;
+};

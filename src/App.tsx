@@ -1,26 +1,26 @@
-import { useState } from 'react'
-import './App.css'
-import Work from './components/Work'
-import { Box, Drawer, List, ListItem, ListItemText } from '@mui/material'
-import { Home } from './components/Home'
-import { Education } from './components/Education'
-import { Skills } from './components/Skills'
-import { Blogs } from './components/Blogs'
-import { Languages } from './components/Languages'
+import { useState } from 'react';
+import './App.css';
+import Work from './components/Work';
+import { Box, Drawer, List, ListItem, ListItemText } from '@mui/material';
+import { Home } from './components/Home';
+import { Education } from './components/Education';
+import { Skills } from './components/Skills';
+import { Blogs } from './components/Blogs';
+import { Languages } from './components/Languages';
 
-type MenuItem = 'Home' | 'Work' | 'Education' | 'Skills' | 'Blogs' | 'Languages'
+type MenuItem = 'Home' | 'Work' | 'Education' | 'Skills' | 'Blogs' | 'Languages';
 
 const drawerWidth = 240;
 const menuItems: MenuItem[] = ['Home', 'Work', 'Education', 'Skills', 'Blogs', 'Languages'];
 
 function App() {
-  const [selectedMenu, setSelectedMenu] = useState<MenuItem>('Home')
+  const [selectedMenu, setSelectedMenu] = useState<MenuItem>('Home');
 
   return (
     <Box sx={{ display: 'flex' }}>
       {/* Sidebar */}
       <Drawer
-        variant="permanent"
+        variant='permanent'
         sx={{
           width: drawerWidth,
           flexShrink: 0,
@@ -28,13 +28,13 @@ function App() {
             width: drawerWidth,
             boxSizing: 'border-box',
             backgroundColor: '#4A90E2',
-            color: 'white'
+            color: 'white',
           },
         }}
       >
         <List sx={{ mt: 2 }}>
           {menuItems.map((text) => (
-            <ListItem 
+            <ListItem
               key={text}
               sx={{
                 backgroundColor: text === selectedMenu ? '#F4A460' : 'transparent',
@@ -42,7 +42,7 @@ function App() {
                 mx: 1,
                 '&:hover': {
                   backgroundColor: text === selectedMenu ? '#F4A460' : 'rgba(255, 255, 255, 0.1)',
-                }
+                },
               }}
               onClick={() => setSelectedMenu(text)}
             >
@@ -53,16 +53,16 @@ function App() {
       </Drawer>
 
       {/* Main content */}
-      <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
-        {selectedMenu === "Home" && <Home />}
-        {selectedMenu === "Work" && <Work />}
-        {selectedMenu === "Education" && <Education />}
-        {selectedMenu === "Skills" && <Skills />}
-        {selectedMenu === "Blogs" && <Blogs />}
-        {selectedMenu === "Languages" && <Languages />}
+      <Box component='main' sx={{ flexGrow: 1, p: 3 }}>
+        {selectedMenu === 'Home' && <Home />}
+        {selectedMenu === 'Work' && <Work />}
+        {selectedMenu === 'Education' && <Education />}
+        {selectedMenu === 'Skills' && <Skills />}
+        {selectedMenu === 'Blogs' && <Blogs />}
+        {selectedMenu === 'Languages' && <Languages />}
       </Box>
     </Box>
-  )
+  );
 }
 
-export default App
+export default App;
