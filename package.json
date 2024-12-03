@@ -6,8 +6,14 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
-    "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "lint": "eslint ./src --no-error-on-unmatched-pattern --cache --cache-location node_modules/.cache/eslint/ --cache-strategy content",
+    "lint:fix": "pnpm lint --fix",
+    "format": "prettier \"**/*.+(html|css|json|ts|tsx)\" --ignore-path .gitignore --ignore-path .prettierignore --cache --cache-strategy content --check",
+    "format:fix": "pnpm format --write",
+    "types:check": "tsc --noEmit --pretty",
+    "validate": "pnpm lint && pnpm format && pnpm types:check",
+    "validate:fix": "pnpm lint:fix && pnpm format:fix && pnpm types:check"
   },
   "dependencies": {
     "@emotion/react": "^11.13.3",
@@ -18,13 +24,24 @@
     "react-dom": "^18.3.1"
   },
   "devDependencies": {
+    "@eslint/compat": "1.2.3",
     "@eslint/js": "^9.13.0",
     "@types/react": "^18.3.11",
     "@types/react-dom": "^18.3.1",
     "@vitejs/plugin-react": "^4.3.3",
     "eslint": "^9.13.0",
+    "eslint-config-prettier": "9.1.0",
+    "eslint-config-xo": "0.46.0",
+    "eslint-config-xo-react": "0.27.0",
+    "eslint-config-xo-typescript": "7.0.0",
+    "eslint-plugin-import": "2.31.0",
+    "eslint-plugin-jsx-a11y": "6.10.2",
+    "eslint-plugin-mui-path-imports": "0.0.15",
+    "eslint-plugin-react": "7.37.2",
     "eslint-plugin-react-hooks": "^5.0.0",
     "eslint-plugin-react-refresh": "^0.4.13",
+    "eslint-plugin-unicorn": "56.0.1",
+    "eslint-plugin-unused-imports": "4.1.4",
     "globals": "^15.11.0",
     "prettier": "3.4.1",
     "typescript": "~5.6.2",

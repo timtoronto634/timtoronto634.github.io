@@ -19,5 +19,5 @@
     "noFallthroughCasesInSwitch": true,
     "noUncheckedSideEffectImports": true
   },
-  "include": ["*.config.ts"]
+  "include": ["*.config.ts", "eslint.config.js"]
 }
