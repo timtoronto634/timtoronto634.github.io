@@ -7,6 +7,7 @@ import { Education } from './components/Education';
 import { Skills } from './components/Skills';
 import { Blogs } from './components/Blogs';
 import { Languages } from './components/Languages';
+import { ProfileLogo } from './components/ProfileLogo';
 
 type MenuItem = 'Home' | 'Work' | 'Education' | 'Skills' | 'Blogs' | 'Languages';
 
@@ -32,6 +33,7 @@ function App() {
           },
         }}
       >
+        <ProfileLogo />
         <List sx={{ mt: 2 }}>
           {menuItems.map((text) => (
             <ListItem
