@@ -9,10 +9,17 @@ import { Blogs } from './components/Blogs';
 import { Languages } from './components/Languages';
 import { ProfileLogo } from './components/ProfileLogo';
 
-type MenuItem = 'Home' | 'Work' | 'Education' | 'Skills' | 'Blogs' | 'Languages';
+type MenuItem = 'Home' | 'Work' | 'Education' | 'Skills' | 'Blogs' | 'Languages / Others';
 
 const drawerWidth = 240;
-const menuItems: MenuItem[] = ['Home', 'Work', 'Education', 'Skills', 'Blogs', 'Languages'];
+const menuItems: MenuItem[] = [
+  'Home',
+  'Work',
+  'Education',
+  'Skills',
+  'Blogs',
+  'Languages / Others',
+];
 
 function App() {
   const [selectedMenu, setSelectedMenu] = useState<MenuItem>('Home');
@@ -61,7 +68,7 @@ function App() {
         {selectedMenu === 'Education' && <Education />}
         {selectedMenu === 'Skills' && <Skills />}
         {selectedMenu === 'Blogs' && <Blogs />}
-        {selectedMenu === 'Languages' && <Languages />}
+        {selectedMenu === 'Languages / Others' && <Languages />}
       </Box>
     </Box>
   );
