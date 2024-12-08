@@ -1,5 +1,5 @@
 import React from 'react';
-import { Typography, Stack } from '@mui/material';
+import { Typography, Stack, ListItem, ListItemText } from '@mui/material';
 
 // Title Component
 interface TitleProps {
@@ -19,30 +19,21 @@ export const Position: React.FC<PositionProps> = ({ position }) => (
   <Typography sx={{ p: 1, color: 'grey' }}>{position}</Typography>
 );
 
-// Impact Component
-interface ImpactProps {
-  text: string;
-  highlight?: boolean;
-}
-
-export const Impact: React.FC<ImpactProps> = ({ text }) => {
-  return <Typography>• {text}</Typography>;
-};
-
 // Impacts Container Component
 interface ImpactsProps {
   items: string[];
 }
 
 export const Impacts: React.FC<ImpactsProps> = ({ items }) => (
-  <Stack spacing={2} sx={{ p: 2 }}>
-    {items.map((impact, index) => (
-      <Impact key={index} text={impact} />
+  <Stack spacing={2} sx={{ p: 2, alignItems: 'center' }}>
+    {items.map((impact) => (
+      <ListItem>
+        <ListItemText>• {impact}</ListItemText>;
+      </ListItem>
     ))}
   </Stack>
 );
 
-// Example usage
 const Work: React.FC = () => {
   const impacts = [
     'Led the design, infrastructure setup, and backend development for new product launches',
@@ -52,7 +43,12 @@ const Work: React.FC = () => {
   ];
 
   return (
-    <Stack spacing={2}>
+    <Stack
+      spacing={2}
+      sx={{
+        align: 'left',
+      }}
+    >
       <Title company='Kaminashi Inc.' />
       <Position position='Fullstack Engineer - Go/TypeScript' />
       <Impacts items={impacts} />
