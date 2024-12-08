@@ -6,7 +6,7 @@ import { Home } from './components/Home';
 import { Education } from './components/Education';
 import { Skills } from './components/Skills';
 import { Blogs } from './components/Blogs';
-import { Languages } from './components/Languages';
+import { LanguagesOthers } from './components/LanguagesOthers';
 import { ProfileLogo } from './components/ProfileLogo';
 
 type MenuItem = 'Home' | 'Work' | 'Education' | 'Skills' | 'Blogs' | 'Languages / Others';
@@ -68,7 +68,7 @@ function App() {
         {selectedMenu === 'Education' && <Education />}
         {selectedMenu === 'Skills' && <Skills />}
         {selectedMenu === 'Blogs' && <Blogs />}
-        {selectedMenu === 'Languages / Others' && <Languages />}
+        {selectedMenu === 'Languages / Others' && <LanguagesOthers />}
       </Box>
     </Box>
   );
