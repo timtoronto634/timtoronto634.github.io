@@ -1,5 +1,7 @@
 import React from 'react';
 import { Typography, Stack, ListItem, ListItemText } from '@mui/material';
+import yaml from 'js-yaml';
+import * as fs from 'fs';
 
 // Title Component
 interface TitleProps {
@@ -33,7 +35,9 @@ export const Impacts: React.FC<ImpactsProps> = ({ items }) => (
     ))}
   </Stack>
 );
-
+// const out = fs.readFileSync('work.yml', 'utf8');
+// const doc = yaml.load(out);
+// Example usage
 const Work: React.FC = () => {
   const impacts = [
     'Led the design, infrastructure setup, and backend development for new product launches',

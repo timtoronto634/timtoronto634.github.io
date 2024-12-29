@@ -1,0 +1,82 @@
+name: Atsuhiro Uchida
+title: Software Engineer
+contacts:
+  - mail: atsuhiro.uchida.a2@gmail.com
+  - linkedin: https://www.linkedin.com/in/atsuhiro-uchida
+  - github: https://github.com/timtoronto634
+  - twitter: https://twitter.com/A2hiro_tim
+sections:
+  - title: General Info
+    content:
+      - name: Atsuhiro Uchida
+      - job-title: Software Engineer
+      - contacts:
+          - mail: atsuhiro.uchida.a2@gmail.com
+  - title: Work Experience
+    content:
+      # - position: Data Analyst Intern
+      #   period: June 2020 - August 2020
+      #   details:
+      #     - Worked on an artificial intelligence consulting team, reviewing client specifications and providing effective solutions based on a variety of technologies
+      #     - Developed transportation fee calculation software, increasing a client’s productivity on transportation related work by a factor of 10
+      #     - Implemented a model to predict the popularity of TV personalities, using time-series clustering within a dynamic time-warping algorithm
+      #     - Identified key insights in client data through matplotlib-based visualizations
+      - position: Software Engineer
+        period: September 2020 - Present
+        details:
+          - Developed and maintained web applications using React and Node.js
+          - Improved application performance by optimizing SQL queries and refactoring code
+          - Collaborated with cross-functional teams to define, design, and ship new features
+          - Conducted code reviews and mentored junior developers
+      - position: Machine Learning Engineer
+        period: January 2019 - May 2020
+        details:
+          - Designed and implemented machine learning models for predictive analytics
+          - Worked with large datasets to extract meaningful insights and improve model accuracy
+          - Deployed machine learning models to production using Docker and Kubernetes
+          - Presented findings and recommendations to stakeholders
+      - position: Frontend Developer
+        period: March 2018 - December 2018
+        details:
+          - Developed user interfaces for web applications using HTML, CSS, and JavaScript
+          - Collaborated with designers to create responsive and visually appealing web pages
+          - Implemented interactive features to enhance user experience
+          - Optimized web pages for performance and accessibility
+      - position: Research Assistant
+        period: April 2017 - February 2018
+        details:
+          - Assisted in research projects related to machine learning and data analysis
+          - Conducted experiments and analyzed results to support research findings
+          - Prepared reports and presentations to communicate research outcomes
+  - title: Education
+    content:
+      - degree: Bachelor of Engineering
+        institution: University of Tokyo
+        period: April 2015 - March 2019
+        details:
+          - Major in Computer Science
+          - Graduated with honors
+  - title: Skills
+    content:
+      - Programming Languages:
+          - Python
+          - JavaScript
+          - Java
+          - C++
+      - Tools & Technologies:
+          - TensorFlow
+          - PyTorch
+          - Docker
+          - Kubernetes
+      - Soft Skills:
+          - Problem-solving
+          - Team collaboration
+          - Communication
+  - title: Projects
+    content:
+      - name: Transportation Fee Calculation Software
+        description: Developed software to calculate transportation fees, increasing productivity by a factor of 10.
+      - name: TV Personality Popularity Prediction Model
+        description: Implemented a model to predict the popularity of TV personalities using time-series clustering.
+      - name: Data Visualization Tools
+        description: Created various data visualization tools using matplotlib to identify key insights in client data.
