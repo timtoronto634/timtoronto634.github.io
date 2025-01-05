@@ -1,7 +1,10 @@
 education:
-  - degree: Bachelor of Engineering
-    institution: University of Tokyo
-    period: April 2015 - March 2019
+  - degree: "MSc, Computer Science"
+    institution: "Waseda University"
+    location: "Tokyo"
+    period: "April 2019 - March 2021"
     details:
-      - Major in Computer Science
-      - Graduated with honors
+      - "Researched the meaning (prior) of CNN architecture by correlation analysis of image noise reduction score between different methods"
+      - "Designed experiments over multiple GPU server, saving result to PostgreSQL, visualized in redash"
+      - "Managed 20+ GPU servers and network of lab in a team of 3"
+

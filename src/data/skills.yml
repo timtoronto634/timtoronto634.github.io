@@ -1,18 +1,29 @@
 skills:
-  - category: Programming Languages
+  - category: "Language and Frameworks"
     items:
-      - Python
-      - JavaScript
-      - Java
-      - C++
-  - category: Tools & Technologies
+      - "Golang"
+      - "TypeScript"
+      - "Ruby"
+      - "Python"
+      - "Ruby on Rails"
+      - "React"
+      - "Next.js"
+      - "Django"
+      - "C++"
+      - "Haskell"
+  - category: "Infrastructure & Tools"
     items:
-      - TensorFlow
-      - PyTorch
-      - Docker
-      - Kubernetes
-  - category: Soft Skills
+      - "Docker"
+      - "Terraform"
+      - "Kubernetes"
+      - "Helm"
+      - "AWS"
+      - "GCP"
+      - "CI/CD"
+  - category: "Others"
     items:
-      - Problem-solving
-      - Team collaboration
-      - Communication
+      - "Competitive Programming"
+      - "OSS Contribution"
+      - "SPAJAM Hackathon"
+      - "System Design"
+      - "Agile Development"
