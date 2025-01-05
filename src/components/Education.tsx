@@ -1,5 +1,5 @@
 import { Stack, Typography, Paper } from '@mui/material';
-import workData from '../data/work.yml';
+import educationData from '../data/education.yml';
 
 interface Education {
   degree: string;
@@ -9,10 +9,7 @@ interface Education {
 }
 
 interface EducationData {
-  sections: {
-    title: string;
-    content: Education[];
-  }[];
+  education: Education[];
 }
 
 const Title: React.FC = () => (
@@ -51,17 +48,16 @@ const EducationItem: React.FC<EducationItemProps> = ({ education }) => (
 );
 
 export const Education: React.FC = () => {
-  const data = workData as EducationData;
-  const educationSection = data.sections.find(section => section.title === 'Education');
+  const data = educationData as EducationData;
 
-  if (!educationSection) {
+  if (!data.education || data.education.length === 0) {
     return <Typography>No education data found</Typography>;
   }
 
   return (
     <Stack spacing={4}>
       <Title />
-      {educationSection.content.map((edu, index) => (
+      {data.education.map((edu, index) => (
         <EducationItem key={index} education={edu} />
       ))}
     </Stack>

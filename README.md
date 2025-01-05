@@ -25,7 +25,11 @@ This repository contains the source code for my personal portfolio website. It's
 │   │   ├── Work.tsx      # Work experience component
 │   │   └── ...           # Other component files
 │   ├── data/             # Content data directory
-│   │   └── work.yml      # Work experience data
+│   │   ├── general_info.yml  # General information and contacts
+│   │   ├── work_experience.yml # Work experience data
+│   │   ├── education.yml     # Educational background
+│   │   ├── skills.yml        # Technical and soft skills
+│   │   └── projects.yml      # Project portfolio
 │   ├── assets/           # Static assets
 │   └── main.tsx          # Application entry point
 ├── images/               # Image assets
@@ -70,8 +74,11 @@ pnpm install
 ## Data Management
 
 Content is managed through YAML files located in `src/data/`:
-- `work.yml`: Contains work experience information
-- Additional YAML files can be added for other content sections
+- `general_info.yml`: Contains personal information and contact details
+- `work_experience.yml`: Contains work experience information
+- `education.yml`: Contains educational background
+- `skills.yml`: Contains technical, tools, and soft skills
+- `projects.yml`: Contains project portfolio information
 
 To update content:
 1. Modify the relevant YAML file in `src/data/`

@@ -3,7 +3,7 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import EmailIcon from '@mui/icons-material/Email';
-import workData from '../data/work.yml';
+import generalInfo from '../data/general_info.yml';
 
 interface Contact {
   mail?: string;
@@ -13,14 +13,9 @@ interface Contact {
 }
 
 interface GeneralInfo {
-  sections: {
-    title: string;
-    content: {
-      name?: string;
-      'job-title'?: string;
-      contacts?: Contact[];
-    }[];
-  }[];
+  name: string;
+  title: string;
+  contacts: Contact[];
 }
 
 const SocialLinks: React.FC<{ contacts: Contact[] }> = ({ contacts }) => {
@@ -75,14 +70,13 @@ const SocialLinks: React.FC<{ contacts: Contact[] }> = ({ contacts }) => {
 };
 
 export const Home: React.FC = () => {
-  const data = workData as GeneralInfo;
-  const generalInfo = data.sections.find(section => section.title === 'General Info');
+  const data = generalInfo as GeneralInfo;
 
-  if (!generalInfo?.content[0]) {
+  if (!data.name || !data.title) {
     return <Typography>No general info found</Typography>;
   }
 
-  const { name, 'job-title': jobTitle, contacts } = generalInfo.content[0];
+  const { name, title: jobTitle, contacts } = data;
 
   return (
     <Stack

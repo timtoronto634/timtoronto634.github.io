@@ -1,15 +1,13 @@
 import { Stack, Typography, Paper, Grid } from '@mui/material';
-import workData from '../data/work.yml';
+import skillsData from '../data/skills.yml';
 
 interface SkillCategory {
-  [key: string]: string[];
+  category: string;
+  items: string[];
 }
 
 interface SkillsData {
-  sections: {
-    title: string;
-    content: SkillCategory[];
-  }[];
+  skills: SkillCategory[];
 }
 
 const Title: React.FC = () => (
@@ -50,26 +48,22 @@ const SkillCategoryComponent: React.FC<SkillCategoryProps> = ({ title, skills })
 );
 
 export const Skills: React.FC = () => {
-  const data = workData as SkillsData;
-  const skillsSection = data.sections.find(section => section.title === 'Skills');
+  const data = skillsData as SkillsData;
 
-  if (!skillsSection) {
+  if (!data.skills || data.skills.length === 0) {
     return <Typography>No skills data found</Typography>;
   }
 
   return (
     <Stack spacing={4}>
       <Title />
-      {skillsSection.content.map((categoryObj, index) => {
-        const [categoryName, skills] = Object.entries(categoryObj)[0];
-        return (
-          <SkillCategoryComponent
-            key={index}
-            title={categoryName}
-            skills={skills}
-          />
-        );
-      })}
+      {data.skills.map((category, index) => (
+        <SkillCategoryComponent
+          key={index}
+          title={category.category}
+          skills={category.items}
+        />
+      ))}
     </Stack>
   );
 };

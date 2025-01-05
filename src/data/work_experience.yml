@@ -1,0 +1,28 @@
+experience:
+  - position: "Software Engineer"
+    period: September 2020 - Present
+    details:
+      - Developed and maintained web applications using React and Node.js
+      - Improved application performance by optimizing SQL queries and refactoring code
+      - Collaborated with cross-functional teams to define, design, and ship new features
+      - Conducted code reviews and mentored junior developers
+  - position: Machine Learning Engineer
+    period: January 2019 - May 2020
+    details:
+      - Designed and implemented machine learning models for predictive analytics
+      - Worked with large datasets to extract meaningful insights and improve model accuracy
+      - Deployed machine learning models to production using Docker and Kubernetes
+      - Presented findings and recommendations to stakeholders
+  - position: Frontend Developer
+    period: March 2018 - December 2018
+    details:
+      - Developed user interfaces for web applications using HTML, CSS, and JavaScript
+      - Collaborated with designers to create responsive and visually appealing web pages
+      - Implemented interactive features to enhance user experience
+      - Optimized web pages for performance and accessibility
+  - position: Research Assistant
+    period: April 2017 - February 2018
+    details:
+      - Assisted in research projects related to machine learning and data analysis
+      - Conducted experiments and analyzed results to support research findings
+      - Prepared reports and presentations to communicate research outcomes

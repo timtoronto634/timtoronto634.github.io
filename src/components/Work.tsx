@@ -1,5 +1,5 @@
 import { Typography, Stack, ListItem, ListItemText, Paper } from '@mui/material';
-import workData from '../data/work.yml';
+import workData from '../data/work_experience.yml';
 
 interface WorkExperience {
   position: string;
@@ -8,10 +8,7 @@ interface WorkExperience {
 }
 
 interface WorkData {
-  sections: {
-    title: string;
-    content: WorkExperience[];
-  }[];
+  experience: WorkExperience[];
 }
 
 // Title Component
@@ -61,16 +58,15 @@ const Details: React.FC<DetailsProps> = ({ items }) => (
 
 const Work: React.FC = () => {
   const data = workData as WorkData;
-  const workExperience = data.sections.find(section => section.title === 'Work Experience');
 
-  if (!workExperience) {
+  if (!data.experience || data.experience.length === 0) {
     return <Typography>No work experience data found</Typography>;
   }
 
   return (
     <Stack spacing={4}>
       <Title text="Work Experience" />
-      {workExperience.content.map((experience, index) => (
+      {data.experience.map((experience, index) => (
         <Paper key={index} elevation={2} sx={{ p: 3 }}>
           <Stack spacing={2}>
             <Position position={experience.position} period={experience.period} />

@@ -1,0 +1,18 @@
+skills:
+  - category: Programming Languages
+    items:
+      - Python
+      - JavaScript
+      - Java
+      - C++
+  - category: Tools & Technologies
+    items:
+      - TensorFlow
+      - PyTorch
+      - Docker
+      - Kubernetes
+  - category: Soft Skills
+    items:
+      - Problem-solving
+      - Team collaboration
+      - Communication
