@@ -95,7 +95,7 @@ export const Home: React.FC = () => {
       }}
     >
       <Avatar
-        src="/images/Myself.jpg"
+        src="images/Myself.jpg"
         alt={name}
         sx={{
           width: 200,
