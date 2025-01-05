@@ -1,0 +1,37 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "useDefineForClassFields": true,
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
+    "skipLibCheck": true,
+
+    /* Bundler mode */
+    "moduleResolution": "Bundler",
+    "allowImportingTsExtensions": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "react-jsx",
+
+    /* Linting */
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
+
+    /* additional */
+    "resolveJsonModule": true,
+    "baseUrl": "./", // vite-tsconfig-paths
+    "paths": { "@/*": ["./src/*"] }, // vite-tsconfig-paths
+    "pretty": true,
+    "newLine": "lf",
+    "stripInternal": true,
+    "noImplicitOverride": true,
+    "noUncheckedIndexedAccess": true,
+    "noPropertyAccessFromIndexSignature": true,
+    "noEmitOnError": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolvePackageJsonExports": false
+  },
+  "include": ["src"]
+}

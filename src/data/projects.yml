@@ -1,0 +1,7 @@
+projects:
+  - name: Transportation Fee Calculation Software
+    description: Developed software to calculate transportation fees, increasing productivity by a factor of 10.
+  - name: TV Personality Popularity Prediction Model
+    description: Implemented a model to predict the popularity of TV personalities using time-series clustering.
+  - name: Data Visualization Tools
+    description: Created various data visualization tools using matplotlib to identify key insights in client data.
