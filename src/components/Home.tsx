@@ -19,8 +19,12 @@ interface GeneralInfo {
 }
 
 const SocialLinks: React.FC<{ contacts: Contact[] }> = ({ contacts }) => {
-  const contact = contacts[0]; // Assuming first contact object has all links
+  const contact = contacts[0];
   
+  if (!contact) {
+    return null;
+  }
+
   return (
     <Stack direction="row" spacing={2} sx={{ mt: 3 }}>
       {contact.github && (
