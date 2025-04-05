@@ -1,13 +1,15 @@
 import { Box, IconButton, Typography } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import { themeConstants } from '../../styles/theme';
+import { MenuItem } from '../../types/navigation';
 
 interface HeaderProps {
   onMenuToggle?: () => void;
   isMobile: boolean;
+  selectedMenu: MenuItem;
 }
 
-export const Header = ({ onMenuToggle, isMobile }: HeaderProps) => {
+export const Header = ({ onMenuToggle, isMobile, selectedMenu }: HeaderProps) => {
   return (
     <Box
       component='header'
@@ -29,7 +31,7 @@ export const Header = ({ onMenuToggle, isMobile }: HeaderProps) => {
           <MenuIcon />
         </IconButton>
       )}
-      <Typography variant='h6'>Home</Typography>
+      <Typography variant='h6'>{selectedMenu}</Typography>
     </Box>
   );
 };
