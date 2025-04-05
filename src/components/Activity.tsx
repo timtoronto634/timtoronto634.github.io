@@ -1,9 +1,16 @@
 import { Stack, Typography, Paper, ListItem, ListItemText, Divider } from '@mui/material';
+import blogData from '../data/blog.yml';
 
 interface BlogPost {
   title: string;
+  url: string;
   date?: string;
-  link?: string;
+  language: string;
+}
+
+interface BlogData {
+  personal_blogs: BlogPost[];
+  company_blogs: BlogPost[];
 }
 
 const Title: React.FC = () => (
@@ -13,28 +20,28 @@ const Title: React.FC = () => (
 );
 
 interface BlogSectionProps {
-  language: string;
+  title: string;
   posts: BlogPost[];
 }
 
-const BlogSection: React.FC<BlogSectionProps> = ({ language, posts }) => (
+const BlogSection: React.FC<BlogSectionProps> = ({ title, posts }) => (
   <Paper elevation={2} sx={{ p: 3 }}>
-    <Typography variant='h6' sx={{ color: '#333', mb: 2 }}>
-      {language}
+    <Typography variant='h6' sx={{ color: '#333', mb: 2, fontWeight: 'bold' }}>
+      {title}
     </Typography>
     <Stack divider={<Divider />} spacing={2}>
       {posts.map((post, index) => (
         <ListItem
           key={index}
           component='a'
-          href={post.link}
+          href={post.url}
           target='_blank'
           rel='noopener noreferrer'
           sx={{
             display: 'block',
             '&:hover': {
               backgroundColor: 'rgba(74, 144, 226, 0.1)',
-              cursor: post.link ? 'pointer' : 'default',
+              cursor: 'pointer',
             },
             textDecoration: 'none',
             color: 'inherit',
@@ -61,28 +68,21 @@ const BlogSection: React.FC<BlogSectionProps> = ({ language, posts }) => (
 );
 
 export const Activity: React.FC = () => {
-  const japanesePosts: BlogPost[] = [
-    {
-      title: '【AWS re:Invent 2024】',
-      date: '2024-01',
-      // Add link when available
-    },
-    // Add more Japanese posts here
-  ];
-
-  const englishPosts: BlogPost[] = [
-    // Add English posts when available
-  ];
+  const data = blogData as BlogData;
 
   return (
     <Stack spacing={4}>
       <Title />
-      {japanesePosts.length > 0 && <BlogSection language='Japanese' posts={japanesePosts} />}
-      {englishPosts.length > 0 && <BlogSection language='English' posts={englishPosts} />}
-      {japanesePosts.length === 0 && englishPosts.length === 0 && (
+      {data.personal_blogs && data.personal_blogs.length > 0 && (
+        <BlogSection title='Personal Blog Sites' posts={data.personal_blogs} />
+      )}
+      {data.company_blogs && data.company_blogs.length > 0 && (
+        <BlogSection title='Company Blog Posts' posts={data.company_blogs} />
+      )}
+      {!data.personal_blogs?.length && !data.company_blogs?.length && (
         <Paper elevation={2} sx={{ p: 3 }}>
           <Typography variant='body1' sx={{ color: 'grey.600', textAlign: 'center' }}>
-            Activity posts coming soon...
+            No blog posts found
           </Typography>
         </Paper>
       )}
