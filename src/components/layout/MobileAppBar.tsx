@@ -9,7 +9,6 @@ export const MobileAppBar = ({ onMenuToggle }: MobileAppBarProps) => {
     <AppBar
       position='fixed'
       sx={{
-        display: { sm: 'none' },
         zIndex: theme.zIndex.drawer + 2,
       }}
     >

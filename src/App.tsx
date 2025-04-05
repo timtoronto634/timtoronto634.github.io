@@ -14,7 +14,7 @@ export const App = () => {
 
   return (
     <Box sx={{ display: 'flex' }}>
-      <MobileAppBar onMenuToggle={() => setMobileOpen(!mobileOpen)} />
+      {isMobile && <MobileAppBar onMenuToggle={() => setMobileOpen(!mobileOpen)} />}
       <Sidebar
         selectedMenu={selectedMenu}
         isMobile={isMobile}
