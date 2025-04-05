@@ -1,0 +1,57 @@
+# TypeScript/React Development Rules
+
+## Code Style & Formatting
+- Follow the project's .prettierrc.cjs configuration
+- Use TypeScript's strict mode as configured in tsconfig.json
+- Use meaningful and descriptive variable/function names
+- Keep components focused and single-responsibility
+- Use proper TypeScript types instead of 'any'
+
+## Component Guidelines
+- Use functional components with hooks
+- Keep components small and modular (under 200 lines recommended)
+- Follow consistent naming:
+  - Components: PascalCase
+  - Files: PascalCase matching component name
+  - Utilities: camelCase
+- Separate layout components (as done in src/components/layout/)
+- Import order:
+  1. React and external libraries
+  2. Components
+  3. Types
+  4. Styles/assets
+
+## Data Management
+- Keep YAML data files in src/data/ organized by category
+- Add proper typing for all YAML data structures
+- Document data schema changes
+
+## Documentation
+- Add JSDoc comments for component props interfaces
+- Include brief component descriptions
+- Document complex logic or business rules
+- Keep README.md updated with new features and changes
+
+## Project Structure
+- Follow established directory organization:
+  - /src/components/ for React components
+  - /src/types/ for TypeScript types
+  - /src/data/ for YAML data files
+  - /src/styles/ for theme and styling
+  - /public/ for static assets
+- Avoid deeply nested component structures
+
+## Performance
+- Implement proper React memo/useMemo/useCallback optimizations for expensive operations
+- Lazy load components when appropriate
+- Optimize images and static assets
+
+## Testing
+- Write unit tests for critical components and utilities
+- Test component rendering and user interactions
+- Verify data transformations
+
+## Version Control
+- Write clear, descriptive commit messages
+- Keep commits focused and atomic
+- Update documentation alongside code changes
