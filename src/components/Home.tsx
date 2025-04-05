@@ -85,7 +85,7 @@ export const Home: React.FC = () => {
         spacing: 4,
         maxWidth: 800,
         mx: 'auto',
-        pt: 4,
+        p: 4,
       }}
     >
       <Avatar
