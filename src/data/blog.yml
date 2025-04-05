@@ -1,3 +1,16 @@
+community_involvement:
+  - title: 'AWS Community Builder'
+    description: 'Member since March 2025'
+    period: '2025/03 - Present'
+
+event_attendance:
+  - title: 'AWS re:Invent 2024'
+    date: '2024/11'
+    location: 'Las Vegas, USA'
+  - title: 'AWS re:Invent 2023'
+    date: '2023/11'
+    location: 'Las Vegas, USA'
+
 personal_blogs:
   - title: '(Japanese) Progress of a2'
     url: 'https://timtoronto634.hatenablog.com/'
