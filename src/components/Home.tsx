@@ -26,7 +26,14 @@ const SocialLinks: React.FC<{ contacts: Contact[] }> = ({ contacts }) => {
   }
 
   return (
-    <Stack direction='row' spacing={2} sx={{ mt: 3 }}>
+    <Stack
+      direction='row'
+      spacing={2}
+      sx={{
+        justifyContent: 'center',
+        alignItems: 'center',
+      }}
+    >
       {contact.github && (
         <IconButton
           component={Link}
@@ -88,19 +95,44 @@ export const Home: React.FC = () => {
         p: 4,
       }}
     >
-      <Avatar
-        src='/profile_picture.jpg'
-        alt={name}
+      <Stack
+        direction='row'
+        spacing={4}
         sx={{
-          width: 200,
-          height: 200,
           mb: 3,
-          border: '4px solid #4A90E2',
+          justifyContent: 'center',
+          alignItems: 'center',
         }}
-      />
+      >
+        <Avatar
+          src='/a2_logo_square.png'
+          alt='a2 logo'
+          variant='square'
+          sx={{
+            width: 200,
+            height: 200,
+          }}
+        />
+        <Avatar
+          src='/profile_picture.jpg'
+          alt={name}
+          sx={{
+            width: 200,
+            height: 200,
+            border: '4px solid #4A90E2',
+          }}
+        />
+      </Stack>
 
-      <Paper elevation={3} sx={{ p: 4, textAlign: 'center', width: '100%' }}>
-        <Typography variant='h3' sx={{ mb: 2, color: '#333' }}>
+      <Paper
+        elevation={3}
+        sx={{
+          p: 4,
+          textAlign: 'center',
+          width: '100%',
+        }}
+      >
+        <Typography variant='h4' sx={{ mb: 2, color: '#333' }}>
           {name}
         </Typography>
         <Typography variant='h5' sx={{ mb: 3, color: '#666' }}>
