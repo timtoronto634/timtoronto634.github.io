@@ -3,9 +3,9 @@ import { MainContentProps } from '../../types/navigation';
 import { Home } from '../Home';
 import Work from '../Work';
 import { Education } from '../Education';
-import { Skills } from '../Skills';
+import { Skill } from '../Skill';
 import { Activity } from '../Activity';
-import { LanguagesOthers } from '../LanguagesOthers';
+import { LanguageOther } from '../LanguageOther';
 import { themeConstants } from '../../styles/theme';
 
 export const MainContent = ({ selectedMenu }: MainContentProps) => {
@@ -25,9 +25,9 @@ export const MainContent = ({ selectedMenu }: MainContentProps) => {
       {selectedMenu === 'Home' && <Home />}
       {selectedMenu === 'Work' && <Work />}
       {selectedMenu === 'Education' && <Education />}
-      {selectedMenu === 'Skills' && <Skills />}
+      {selectedMenu === 'Skill' && <Skill />}
       {selectedMenu === 'Activity' && <Activity />}
-      {selectedMenu === 'Languages / Others' && <LanguagesOthers />}
+      {selectedMenu === 'Language / Other' && <LanguageOther />}
     </Box>
   );
 };

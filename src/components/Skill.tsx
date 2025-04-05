@@ -11,8 +11,8 @@ interface SkillsData {
 }
 
 const Title: React.FC = () => (
-  <Typography variant="h5" sx={{ p: 1, color: '#4A90E2', fontWeight: 'bold' }}>
-    Skills
+  <Typography variant='h5' sx={{ p: 1, color: '#4A90E2', fontWeight: 'bold' }}>
+    Skill
   </Typography>
 );
 
@@ -24,7 +24,7 @@ interface SkillCategoryProps {
 const SkillCategoryComponent: React.FC<SkillCategoryProps> = ({ title, skills }) => (
   <Paper elevation={2} sx={{ p: 3 }}>
     <Stack spacing={2}>
-      <Typography variant="h6" sx={{ color: '#333' }}>
+      <Typography variant='h6' sx={{ color: '#333' }}>
         {title}
       </Typography>
       <Grid container spacing={1}>
@@ -38,7 +38,7 @@ const SkillCategoryComponent: React.FC<SkillCategoryProps> = ({ title, skills })
                 borderRadius: 2,
               }}
             >
-              <Typography variant="body1">{skill}</Typography>
+              <Typography variant='body1'>{skill}</Typography>
             </Paper>
           </Grid>
         ))}
@@ -47,7 +47,7 @@ const SkillCategoryComponent: React.FC<SkillCategoryProps> = ({ title, skills })
   </Paper>
 );
 
-export const Skills: React.FC = () => {
+export const Skill: React.FC = () => {
   const data = skillsData as SkillsData;
 
   if (!data.skills || data.skills.length === 0) {
@@ -58,11 +58,7 @@ export const Skills: React.FC = () => {
     <Stack spacing={4}>
       <Title />
       {data.skills.map((category, index) => (
-        <SkillCategoryComponent
-          key={index}
-          title={category.category}
-          skills={category.items}
-        />
+        <SkillCategoryComponent key={index} title={category.category} skills={category.items} />
       ))}
     </Stack>
   );

@@ -1,6 +1,4 @@
-import { ReactNode } from 'react';
-
-export type MenuItem = 'Home' | 'Work' | 'Education' | 'Skills' | 'Activity' | 'Languages / Others';
+export type MenuItem = 'Home' | 'Work' | 'Education' | 'Skill' | 'Activity' | 'Language / Other';
 
 export interface NavigationItemProps {
   text: MenuItem;

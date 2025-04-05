@@ -8,9 +8,9 @@ const menuItems: MenuItem[] = [
   'Home',
   'Work',
   'Education',
-  'Skills',
-  'Blogs',
-  'Languages / Others',
+  'Skill',
+  'Activity',
+  'Language / Other',
 ];
 
 export const Sidebar = ({
