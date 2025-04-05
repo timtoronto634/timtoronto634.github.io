@@ -1,4 +1,7 @@
 export const themeConstants = {
+  header: {
+    height: 64,
+  },
   drawer: {
     width: 240,
   },

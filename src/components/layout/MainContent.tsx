@@ -13,10 +13,9 @@ export const MainContent = ({ selectedMenu }: MainContentProps) => {
     <Box
       component='main'
       sx={{
-        flexGrow: 1,
-        p: 3,
-        width: { sm: `calc(100% - ${themeConstants.drawer.width}px)` },
-        mt: { xs: 7, sm: 0 },
+        position: 'relative',
+        top: themeConstants.header.height,
+        padding: 2,
       }}
     >
       {selectedMenu === 'Home' && <Home />}

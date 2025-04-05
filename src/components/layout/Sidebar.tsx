@@ -34,7 +34,6 @@ export const Sidebar = ({
         sx={{
           display: 'flex',
           justifyContent: 'center',
-          p: 2,
         }}
       />
       <List sx={{ mt: 2 }}>

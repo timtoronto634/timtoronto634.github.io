@@ -1,10 +1,11 @@
 import { useState } from 'react';
 import './App.css';
-import { Box, useTheme, useMediaQuery } from '@mui/material';
+import { Box, useTheme, useMediaQuery, Stack } from '@mui/material';
 import { MenuItem } from './types/navigation';
 import { Sidebar } from './components/layout/Sidebar';
-import { MobileAppBar } from './components/layout/MobileAppBar';
+import { Header } from './components/layout/Header';
 import { MainContent } from './components/layout/MainContent';
+import { themeConstants } from './styles/theme';
 
 export const App = () => {
   const [selectedMenu, setSelectedMenu] = useState<MenuItem>('Home');
@@ -13,8 +14,7 @@ export const App = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   return (
-    <Box sx={{ display: 'flex' }}>
-      {isMobile && <MobileAppBar onMenuToggle={() => setMobileOpen(!mobileOpen)} />}
+    <Stack sx={{ flexDirection: 'row' }}>
       <Sidebar
         selectedMenu={selectedMenu}
         isMobile={isMobile}
@@ -22,8 +22,11 @@ export const App = () => {
         onMenuSelect={setSelectedMenu}
         onMobileClose={() => setMobileOpen(false)}
       />
-      <MainContent selectedMenu={selectedMenu} />
-    </Box>
+      <Stack>
+        <Header isMobile={isMobile} onMenuToggle={() => setMobileOpen(!mobileOpen)} />
+        <MainContent selectedMenu={selectedMenu} />
+      </Stack>
+    </Stack>
   );
 };
 
