@@ -13,7 +13,13 @@ const menuItems: MenuItem[] = [
   'Languages / Others',
 ];
 
-export const Sidebar = ({ selectedMenu, isMobile, onMenuSelect, onMobileClose }: SidebarProps) => {
+export const Sidebar = ({
+  selectedMenu,
+  isMobile,
+  mobileOpen,
+  onMenuSelect,
+  onMobileClose,
+}: SidebarProps) => {
   const theme = useTheme();
 
   const drawerContent = (
@@ -65,7 +71,7 @@ export const Sidebar = ({ selectedMenu, isMobile, onMenuSelect, onMobileClose }:
   return (
     <Drawer
       variant={isMobile ? 'temporary' : 'permanent'}
-      open={isMobile ? true : true}
+      open={isMobile ? mobileOpen : true}
       onClose={onMobileClose}
       ModalProps={{
         keepMounted: true,

@@ -23,6 +23,7 @@ export interface MainContentProps {
 export interface SidebarProps {
   selectedMenu: MenuItem;
   isMobile: boolean;
+  mobileOpen: boolean;
   onMenuSelect: (menu: MenuItem) => void;
   onMobileClose?: () => void;
 }
