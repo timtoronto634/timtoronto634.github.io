@@ -20,53 +20,49 @@ interface GeneralInfo {
 
 const SocialLinks: React.FC<{ contacts: Contact[] }> = ({ contacts }) => {
   const contact = contacts[0];
-  
+
   if (!contact) {
     return null;
   }
 
   return (
-    <Stack direction="row" spacing={2} sx={{ mt: 3 }}>
+    <Stack direction='row' spacing={2} sx={{ mt: 3 }}>
       {contact.github && (
         <IconButton
           component={Link}
           href={contact.github}
-          target="_blank"
-          rel="noopener noreferrer"
+          target='_blank'
+          rel='noopener noreferrer'
           sx={{ color: '#333' }}
         >
-          <GitHubIcon fontSize="large" />
+          <GitHubIcon fontSize='large' />
         </IconButton>
       )}
       {contact.linkedin && (
         <IconButton
           component={Link}
           href={contact.linkedin}
-          target="_blank"
-          rel="noopener noreferrer"
+          target='_blank'
+          rel='noopener noreferrer'
           sx={{ color: '#0077b5' }}
         >
-          <LinkedInIcon fontSize="large" />
+          <LinkedInIcon fontSize='large' />
         </IconButton>
       )}
       {contact.twitter && (
         <IconButton
           component={Link}
           href={contact.twitter}
-          target="_blank"
-          rel="noopener noreferrer"
+          target='_blank'
+          rel='noopener noreferrer'
           sx={{ color: '#1DA1F2' }}
         >
-          <TwitterIcon fontSize="large" />
+          <TwitterIcon fontSize='large' />
         </IconButton>
       )}
       {contact.mail && (
-        <IconButton
-          component={Link}
-          href={`mailto:${contact.mail}`}
-          sx={{ color: '#EA4335' }}
-        >
-          <EmailIcon fontSize="large" />
+        <IconButton component={Link} href={`mailto:${contact.mail}`} sx={{ color: '#EA4335' }}>
+          <EmailIcon fontSize='large' />
         </IconButton>
       )}
     </Stack>
@@ -93,7 +89,7 @@ export const Home: React.FC = () => {
       }}
     >
       <Avatar
-        src="images/Myself.jpg"
+        src='/profile_picture.jpg'
         alt={name}
         sx={{
           width: 200,
@@ -102,19 +98,19 @@ export const Home: React.FC = () => {
           border: '4px solid #4A90E2',
         }}
       />
-      
+
       <Paper elevation={3} sx={{ p: 4, textAlign: 'center', width: '100%' }}>
-        <Typography variant="h3" sx={{ mb: 2, color: '#333' }}>
+        <Typography variant='h3' sx={{ mb: 2, color: '#333' }}>
           {name}
         </Typography>
-        <Typography variant="h5" sx={{ mb: 3, color: '#666' }}>
+        <Typography variant='h5' sx={{ mb: 3, color: '#666' }}>
           {jobTitle}
         </Typography>
-        
-        <Typography variant="body1" sx={{ mb: 3, color: '#666', maxWidth: 600, mx: 'auto' }}>
-          I'm a passionate software engineer with expertise in full-stack development,
-          focusing on creating efficient and scalable solutions. I enjoy working with
-          modern technologies and contributing to innovative projects.
+
+        <Typography variant='body1' sx={{ mb: 3, color: '#666', maxWidth: 600, mx: 'auto' }}>
+          I'm a passionate software engineer with expertise in full-stack development, focusing on
+          creating efficient and scalable solutions. I enjoy working with modern technologies and
+          contributing to innovative projects.
         </Typography>
 
         {contacts && <SocialLinks contacts={contacts} />}
