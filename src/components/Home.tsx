@@ -108,9 +108,9 @@ export const Home: React.FC = () => {
         </Typography>
 
         <Typography variant='body1' sx={{ mb: 3, color: '#666', maxWidth: 600, mx: 'auto' }}>
-          I'm a passionate software engineer with expertise in full-stack development, focusing on
-          creating efficient and scalable solutions. I enjoy working with modern technologies and
-          contributing to innovative projects.
+          I'm a passionate software engineer with expertise in ai and full-stack development,
+          focusing on creating efficient and scalable solutions. I enjoy working with modern
+          technologies and contributing to innovative projects.
         </Typography>
 
         {contacts && <SocialLinks contacts={contacts} />}
