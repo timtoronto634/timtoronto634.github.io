@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "rm -rf docs/ && vite build && cp -r dist docs",    
+    "build": "rm -rf docs/ && vite build && cp -r dist docs",
     "preview": "vite preview",
     "lint": "eslint ./src --no-error-on-unmatched-pattern --cache --cache-location node_modules/.cache/eslint/ --cache-strategy content",
     "lint:fix": "pnpm lint --fix",
