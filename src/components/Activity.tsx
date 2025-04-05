@@ -7,8 +7,8 @@ interface BlogPost {
 }
 
 const Title: React.FC = () => (
-  <Typography variant="h5" sx={{ p: 1, color: '#4A90E2', fontWeight: 'bold' }}>
-    Blogs
+  <Typography variant='h5' sx={{ p: 1, color: '#4A90E2', fontWeight: 'bold' }}>
+    Activity
   </Typography>
 );
 
@@ -19,17 +19,17 @@ interface BlogSectionProps {
 
 const BlogSection: React.FC<BlogSectionProps> = ({ language, posts }) => (
   <Paper elevation={2} sx={{ p: 3 }}>
-    <Typography variant="h6" sx={{ color: '#333', mb: 2 }}>
+    <Typography variant='h6' sx={{ color: '#333', mb: 2 }}>
       {language}
     </Typography>
     <Stack divider={<Divider />} spacing={2}>
       {posts.map((post, index) => (
         <ListItem
           key={index}
-          component="a"
+          component='a'
           href={post.link}
-          target="_blank"
-          rel="noopener noreferrer"
+          target='_blank'
+          rel='noopener noreferrer'
           sx={{
             display: 'block',
             '&:hover': {
@@ -42,13 +42,13 @@ const BlogSection: React.FC<BlogSectionProps> = ({ language, posts }) => (
         >
           <ListItemText
             primary={
-              <Typography variant="subtitle1" sx={{ color: '#333', fontWeight: 500 }}>
+              <Typography variant='subtitle1' sx={{ color: '#333', fontWeight: 500 }}>
                 {post.title}
               </Typography>
             }
             secondary={
               post.date && (
-                <Typography variant="body2" sx={{ color: 'grey.600' }}>
+                <Typography variant='body2' sx={{ color: 'grey.600' }}>
                   {post.date}
                 </Typography>
               )
@@ -60,7 +60,7 @@ const BlogSection: React.FC<BlogSectionProps> = ({ language, posts }) => (
   </Paper>
 );
 
-export const Blogs: React.FC = () => {
+export const Activity: React.FC = () => {
   const japanesePosts: BlogPost[] = [
     {
       title: '【AWS re:Invent 2024】',
@@ -77,16 +77,12 @@ export const Blogs: React.FC = () => {
   return (
     <Stack spacing={4}>
       <Title />
-      {japanesePosts.length > 0 && (
-        <BlogSection language="Japanese" posts={japanesePosts} />
-      )}
-      {englishPosts.length > 0 && (
-        <BlogSection language="English" posts={englishPosts} />
-      )}
+      {japanesePosts.length > 0 && <BlogSection language='Japanese' posts={japanesePosts} />}
+      {englishPosts.length > 0 && <BlogSection language='English' posts={englishPosts} />}
       {japanesePosts.length === 0 && englishPosts.length === 0 && (
         <Paper elevation={2} sx={{ p: 3 }}>
-          <Typography variant="body1" sx={{ color: 'grey.600', textAlign: 'center' }}>
-            Blog posts coming soon...
+          <Typography variant='body1' sx={{ color: 'grey.600', textAlign: 'center' }}>
+            Activity posts coming soon...
           </Typography>
         </Paper>
       )}

@@ -4,7 +4,7 @@ import { Home } from '../Home';
 import Work from '../Work';
 import { Education } from '../Education';
 import { Skills } from '../Skills';
-import { Blogs } from '../Blogs';
+import { Activity } from '../Activity';
 import { LanguagesOthers } from '../LanguagesOthers';
 import { themeConstants } from '../../styles/theme';
 
@@ -26,7 +26,7 @@ export const MainContent = ({ selectedMenu }: MainContentProps) => {
       {selectedMenu === 'Work' && <Work />}
       {selectedMenu === 'Education' && <Education />}
       {selectedMenu === 'Skills' && <Skills />}
-      {selectedMenu === 'Blogs' && <Blogs />}
+      {selectedMenu === 'Activity' && <Activity />}
       {selectedMenu === 'Languages / Others' && <LanguagesOthers />}
     </Box>
   );
