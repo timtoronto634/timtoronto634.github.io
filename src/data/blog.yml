@@ -1,28 +1,28 @@
-private_blogs:
-  - title: "(Japanese) Progress of a2"
-    url: "https://timtoronto634.hatenablog.com/"
-    language: "Japanese"
+personal_blogs:
+  - title: '(Japanese) Progress of a2'
+    url: 'https://timtoronto634.hatenablog.com/'
+    language: 'Japanese'
 
-  - title: "(English) Medium"
-    url: "https://medium.com/@atsuhiro.uchida.a2"
-    language: "English"
+  - title: '(English) Medium'
+    url: 'https://medium.com/@atsuhiro.uchida.a2'
+    language: 'English'
 
 company_blogs:
-  - title: "(Japanese) 監視ツールを迷ったら CloudWatch から始めてみるのもありなのでは"
-    url: "https://kaminashi-developer.hatenablog.jp/entry/2024/08/28/080000"
-    date: "2024-08-28"
-    language: "Japanese"
+  - title: '(Japanese) 監視ツールを迷ったら CloudWatch から始めてみるのもありなのでは'
+    url: 'https://kaminashi-developer.hatenablog.jp/entry/2024/08/28/080000'
+    date: '2024-08-28'
+    language: 'Japanese'
 
-  - title: "(Japanese) 【AWS re:Invent 2023】自社専用 chatbot を作る AWS の新サービス "Amazon Q for general business use" が面白かった"
-    url: "https://kaminashi-developer.hatenablog.jp/entry/2023/12/19/090000"
-    date: "2023-12-19"
-    language: "Japanese"
+  - title: "(Japanese) 【AWS re:Invent 2023】自社専用 chatbot を作る AWS の新サービス 'Amazon Q for general business use' が面白かった"
+    url: 'https://kaminashi-developer.hatenablog.jp/entry/2023/12/19/090000'
+    date: '2023-12-19'
+    language: 'Japanese'
 
-  - title: "(Japanese) 【AWS re:Invent 2023】Amazon Bedrock の Workshop に参加しました"
-    url: "https://kaminashi-developer.hatenablog.jp/entry/2023/11/30/070000"
-    date: "2023-11-30"
-    language: "Japanese"
+  - title: '(Japanese) 【AWS re:Invent 2023】Amazon Bedrock の Workshop に参加しました'
+    url: 'https://kaminashi-developer.hatenablog.jp/entry/2023/11/30/070000'
+    date: '2023-11-30'
+    language: 'Japanese'
 
-  - title: "(Japanese) 入社半年のエンジニアから見たカミナシの特徴"
-    url: "https://note.com/timtoronto634_a2/n/nb0971b4017a0"
-    language: "Japanese"
+  - title: '(Japanese) 入社半年のエンジニアから見たカミナシの特徴'
+    url: 'https://note.com/timtoronto634_a2/n/nb0971b4017a0'
+    language: 'Japanese'
