@@ -22,11 +22,13 @@ export const App = () => {
         onMobileClose={() => setMobileOpen(false)}
       />
       <Stack>
-        <Header
-          isMobile={isMobile}
-          onMenuToggle={() => setMobileOpen(!mobileOpen)}
-          selectedMenu={selectedMenu}
-        />
+        {isMobile && (
+          <Header
+            isMobile={isMobile}
+            onMenuToggle={() => setMobileOpen(!mobileOpen)}
+            selectedMenu={selectedMenu}
+          />
+        )}
         <MainContent selectedMenu={selectedMenu} />
       </Stack>
     </Stack>

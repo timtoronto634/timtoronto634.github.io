@@ -1,4 +1,4 @@
-import { Box } from '@mui/material';
+import { Box, useMediaQuery, useTheme } from '@mui/material';
 import { MainContentProps } from '../../types/navigation';
 import { Home } from '../Home';
 import Work from '../Work';
@@ -9,13 +9,17 @@ import { LanguagesOthers } from '../LanguagesOthers';
 import { themeConstants } from '../../styles/theme';
 
 export const MainContent = ({ selectedMenu }: MainContentProps) => {
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
+
   return (
     <Box
       component='main'
       sx={{
         position: 'relative',
-        top: themeConstants.header.height,
-        padding: 2,
+        top: isMobile ? themeConstants.header.height : 0,
+        padding: isMobile ? 1 : 2,
+        marginBottom: isMobile ? themeConstants.header.height : 0,
       }}
     >
       {selectedMenu === 'Home' && <Home />}
