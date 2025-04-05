@@ -4,9 +4,15 @@ community_involvement:
     period: '2025/03 - Present'
 
 event_attendance:
+  # - title: 'Go Conference Japan 2025 (Volunteer Staff)'
+  #   date: '2025/09'
+  #   location: 'Tokyo, Japan'
   - title: 'AWS re:Invent 2024'
     date: '2024/11'
     location: 'Las Vegas, USA'
+  - title: 'Go Conference Japan 2024 (Volunteer Staff)'
+    date: '2024/06'
+    location: 'Tokyo, Japan'
   - title: 'AWS re:Invent 2023'
     date: '2023/11'
     location: 'Las Vegas, USA'
