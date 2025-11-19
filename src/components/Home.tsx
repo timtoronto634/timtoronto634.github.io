@@ -1,4 +1,4 @@
-import { Typography, Stack, Link, Avatar, Paper, IconButton } from '@mui/material';
+import { Typography, Stack, Link, Avatar, Paper, IconButton, useTheme, useMediaQuery } from '@mui/material';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import XIcon from '@mui/icons-material/X';
@@ -77,6 +77,8 @@ const SocialLinks: React.FC<{ contacts: Contact[] }> = ({ contacts }) => {
 };
 
 export const Home: React.FC = () => {
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
   const data = generalInfo as GeneralInfo;
 
   if (!data.name || !data.title) {
@@ -96,8 +98,8 @@ export const Home: React.FC = () => {
       }}
     >
       <Stack
-        direction='row'
-        spacing={4}
+        direction={isMobile ? 'column' : 'row'}
+        spacing={isMobile ? 2 : 4}
         sx={{
           mb: 3,
           justifyContent: 'center',
@@ -109,16 +111,16 @@ export const Home: React.FC = () => {
           alt='a2 logo'
           variant='square'
           sx={{
-            width: 200,
-            height: 200,
+            width: isMobile ? 150 : 200,
+            height: isMobile ? 150 : 200,
           }}
         />
         <Avatar
           src='/profile_picture.jpg'
           alt={name}
           sx={{
-            width: 200,
-            height: 200,
+            width: isMobile ? 150 : 200,
+            height: isMobile ? 150 : 200,
             border: '4px solid #4A90E2',
           }}
         />

@@ -20,6 +20,7 @@ export const MainContent = ({ selectedMenu }: MainContentProps) => {
         top: isMobile ? themeConstants.header.height : 0,
         padding: isMobile ? 1 : 2,
         marginBottom: isMobile ? themeConstants.header.height : 0,
+        overflowX: 'hidden',
       }}
     >
       {selectedMenu === 'Home' && <Home />}

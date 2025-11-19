@@ -21,7 +21,7 @@ export const App = () => {
         onMenuSelect={setSelectedMenu}
         onMobileClose={() => setMobileOpen(false)}
       />
-      <Stack>
+      <Stack sx={{ width: '100%', minWidth: 0 }}>
         {isMobile && (
           <Header
             isMobile={isMobile}
