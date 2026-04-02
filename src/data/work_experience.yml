@@ -1,8 +1,18 @@
 experience:
+  - position: "AI Enabling Engineer"
+    company: "Kaminashi Inc."
+    location: "Tokyo, Japan"
+    period: "May 2025 - Current"
+    details:
+      - "Partner with business teams to find high-impact AI use cases and ship prototypes that boost productivity"
+      - "Deliver AI-assisted workflows with guardrails, connecting LLM tooling to internal systems safely"
+      - "Coach non-engineering staff on prompt patterns and reusable templates, accelerating team self-service"
+      - "Measure adoption and iterate with business leads to prioritize the next AI enablement backlog"
+
   - position: "Fullstack Engineer - Go/TypeScript"
     company: "Kaminashi Inc."
     location: "Tokyo, Japan"
-    period: "May 2023 - Current"
+    period: "May 2023 - April 2025"
     details:
       - "Led the design, infrastructure setup, and backend development for new product launches"
       - "Guided the service team by articulating user value and identifying minimum requirements, minimizing time to delivery"
