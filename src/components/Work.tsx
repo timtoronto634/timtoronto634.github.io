@@ -17,7 +17,7 @@ interface TitleProps {
 }
 
 const Title: React.FC<TitleProps> = ({ text }) => (
-  <Typography variant="h5" sx={{ p: 1, color: '#4A90E2', fontWeight: 'bold' }}>
+  <Typography variant='h5' sx={{ p: 1, color: '#4A90E2', fontWeight: 'bold' }}>
     {text}
   </Typography>
 );
@@ -30,10 +30,10 @@ interface PositionProps {
 
 const Position: React.FC<PositionProps> = ({ position, period }) => (
   <Stack>
-    <Typography variant="h6" sx={{ color: '#333' }}>
+    <Typography variant='h6' sx={{ color: '#333' }}>
       {position}
     </Typography>
-    <Typography variant="subtitle1" sx={{ color: 'grey.600' }}>
+    <Typography variant='subtitle1' sx={{ color: 'grey.600' }}>
       {period}
     </Typography>
   </Stack>
@@ -49,7 +49,7 @@ const Details: React.FC<DetailsProps> = ({ items }) => (
     {items.map((detail, index) => (
       <ListItem key={index} sx={{ pl: 2 }}>
         <ListItemText>
-          <Typography variant="body1">• {detail}</Typography>
+          <Typography variant='body1'>• {detail}</Typography>
         </ListItemText>
       </ListItem>
     ))}
@@ -65,7 +65,7 @@ const Work: React.FC = () => {
 
   return (
     <Stack spacing={4}>
-      <Title text="Work Experience" />
+      <Title text='Work Experience' />
       {data.experience.map((experience, index) => (
         <Paper key={index} elevation={2} sx={{ p: 3 }}>
           <Stack spacing={2}>

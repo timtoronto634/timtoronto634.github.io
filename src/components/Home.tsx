@@ -1,4 +1,13 @@
-import { Typography, Stack, Link, Avatar, Paper, IconButton, useTheme, useMediaQuery } from '@mui/material';
+import {
+  Typography,
+  Stack,
+  Link,
+  Avatar,
+  Paper,
+  IconButton,
+  useTheme,
+  useMediaQuery,
+} from '@mui/material';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import XIcon from '@mui/icons-material/X';
