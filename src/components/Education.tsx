@@ -13,7 +13,7 @@ interface EducationData {
 }
 
 const Title: React.FC = () => (
-  <Typography variant="h5" sx={{ p: 1, color: '#4A90E2', fontWeight: 'bold' }}>
+  <Typography variant='h5' sx={{ p: 1, color: '#4A90E2', fontWeight: 'bold' }}>
     Education
   </Typography>
 );
@@ -25,19 +25,19 @@ interface EducationItemProps {
 const EducationItem: React.FC<EducationItemProps> = ({ education }) => (
   <Paper elevation={2} sx={{ p: 3 }}>
     <Stack spacing={1}>
-      <Typography variant="h6" sx={{ color: '#333' }}>
+      <Typography variant='h6' sx={{ color: '#333' }}>
         {education.degree}
       </Typography>
-      <Typography variant="subtitle1" sx={{ color: 'grey.600' }}>
+      <Typography variant='subtitle1' sx={{ color: 'grey.600' }}>
         {education.institution}
       </Typography>
-      <Typography variant="subtitle2" sx={{ color: 'grey.500' }}>
+      <Typography variant='subtitle2' sx={{ color: 'grey.500' }}>
         {education.period}
       </Typography>
       {education.details && (
         <Stack spacing={1} sx={{ mt: 1 }}>
           {education.details.map((detail, index) => (
-            <Typography key={index} variant="body1" sx={{ pl: 2 }}>
+            <Typography key={index} variant='body1' sx={{ pl: 2 }}>
               • {detail}
             </Typography>
           ))}
