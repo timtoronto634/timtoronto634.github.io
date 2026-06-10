@@ -8,107 +8,58 @@
 
     body {
       font-family: 'Helvetica Neue', Arial, sans-serif;
-      font-size: 9pt;
+      font-size: 9.5pt;
       color: #1a1a1a;
       background: #fff;
-      line-height: 1.4;
+      line-height: 1.45;
     }
 
     .page {
       width: 210mm;
       min-height: 297mm;
       margin: 0 auto;
-      display: flex;
+      padding: 10mm 13mm 10mm 13mm;
     }
 
-    /* ── Sidebar ── */
-    .sidebar {
-      width: 58mm;
-      background: #1e3a5f;
-      color: #e8eef5;
-      padding: 10mm 6mm;
-      flex-shrink: 0;
-    }
-
-    .sidebar h1 {
-      font-size: 14pt;
-      font-weight: 700;
-      color: #fff;
-      line-height: 1.2;
-      margin-bottom: 2mm;
-    }
-
-    .sidebar .subtitle {
-      font-size: 8pt;
-      color: #a8c4e0;
-      margin-bottom: 6mm;
-      line-height: 1.3;
-    }
-
-    .sidebar-section {
+    /* ── Header ── */
+    .header {
+      border-bottom: 2px solid #1e3a5f;
+      padding-bottom: 4mm;
       margin-bottom: 5mm;
     }
 
-    .sidebar-section h2 {
-      font-size: 7.5pt;
+    .header-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+    }
+
+    .header h1 {
+      font-size: 20pt;
       font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      color: #a8c4e0;
-      border-bottom: 1px solid #2e5480;
-      padding-bottom: 1mm;
-      margin-bottom: 2.5mm;
+      color: #1e3a5f;
+      letter-spacing: -0.01em;
     }
 
-    .contact-item {
-      font-size: 7.5pt;
-      color: #d0e4f5;
-      margin-bottom: 1.5mm;
-      word-break: break-all;
+    .header .title {
+      font-size: 10pt;
+      color: #555;
+      margin-top: 1mm;
     }
 
-    .contact-item a {
-      color: #d0e4f5;
+    .header-contacts {
+      text-align: right;
+      font-size: 8pt;
+      color: #444;
+      line-height: 1.6;
+    }
+
+    .header-contacts a {
+      color: #444;
       text-decoration: none;
     }
 
-    .skill-group {
-      margin-bottom: 3mm;
-    }
-
-    .skill-group-label {
-      font-size: 7pt;
-      font-weight: 700;
-      color: #a8c4e0;
-      margin-bottom: 1mm;
-    }
-
-    .skill-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1.5mm;
-    }
-
-    .skill-tag {
-      background: #2e5480;
-      color: #d0e4f5;
-      font-size: 6.5pt;
-      padding: 0.8mm 2mm;
-      border-radius: 2px;
-    }
-
-    .community-item {
-      font-size: 7.5pt;
-      color: #d0e4f5;
-      margin-bottom: 1mm;
-    }
-
-    /* ── Main ── */
-    .main {
-      flex: 1;
-      padding: 10mm 8mm 8mm 8mm;
-    }
-
+    /* ── Sections ── */
     .section {
       margin-bottom: 5mm;
     }
@@ -119,11 +70,12 @@
       text-transform: uppercase;
       letter-spacing: 0.1em;
       color: #1e3a5f;
-      border-bottom: 1.5px solid #1e3a5f;
+      border-bottom: 1px solid #1e3a5f;
       padding-bottom: 1mm;
       margin-bottom: 3mm;
     }
 
+    /* ── Job entries ── */
     .job {
       margin-bottom: 4mm;
     }
@@ -132,41 +84,39 @@
       display: flex;
       justify-content: space-between;
       align-items: baseline;
-      margin-bottom: 0.5mm;
     }
 
     .job-title {
-      font-size: 9pt;
+      font-size: 9.5pt;
       font-weight: 700;
       color: #1a1a1a;
     }
 
     .job-period {
-      font-size: 7.5pt;
+      font-size: 8pt;
       color: #666;
       white-space: nowrap;
-      margin-left: 3mm;
     }
 
     .job-company {
-      font-size: 8pt;
+      font-size: 8.5pt;
       color: #1e3a5f;
       font-weight: 600;
       margin-bottom: 1.5mm;
     }
 
     .job ul {
-      padding-left: 3.5mm;
+      padding-left: 0;
       list-style: none;
     }
 
     .job ul li {
-      font-size: 8pt;
-      color: #333;
-      margin-bottom: 1mm;
-      line-height: 1.35;
+      font-size: 8.5pt;
+      color: #222;
+      margin-bottom: 1.2mm;
+      padding-left: 4mm;
       position: relative;
-      padding-left: 3mm;
+      line-height: 1.4;
     }
 
     .job ul li::before {
@@ -175,9 +125,57 @@
       left: 0;
       color: #1e3a5f;
       font-size: 7pt;
-      top: 0.5px;
+      top: 1px;
     }
 
+    /* ── Internships side by side ── */
+    .interns-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4mm;
+    }
+
+    .intern-item .intern-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+    }
+
+    .intern-title {
+      font-size: 8.5pt;
+      font-weight: 700;
+    }
+
+    .intern-period {
+      font-size: 7.5pt;
+      color: #666;
+    }
+
+    .intern-company {
+      font-size: 8pt;
+      color: #1e3a5f;
+      font-weight: 600;
+      margin-bottom: 1mm;
+    }
+
+    .intern-detail {
+      font-size: 8pt;
+      color: #333;
+      padding-left: 4mm;
+      position: relative;
+      line-height: 1.4;
+    }
+
+    .intern-detail::before {
+      content: '▸';
+      position: absolute;
+      left: 0;
+      color: #1e3a5f;
+      font-size: 7pt;
+      top: 1px;
+    }
+
+    /* ── Education ── */
     .edu-item {
       margin-bottom: 2.5mm;
     }
@@ -189,230 +187,199 @@
     }
 
     .edu-degree {
-      font-size: 8.5pt;
+      font-size: 9pt;
       font-weight: 700;
-      color: #1a1a1a;
     }
 
     .edu-period {
-      font-size: 7.5pt;
+      font-size: 8pt;
       color: #666;
     }
 
     .edu-institution {
-      font-size: 8pt;
+      font-size: 8.5pt;
       color: #1e3a5f;
       font-weight: 600;
     }
 
     .edu-detail {
-      font-size: 7.5pt;
+      font-size: 8pt;
       color: #555;
-      margin-top: 0.8mm;
+      margin-top: 0.5mm;
+      padding-left: 4mm;
     }
 
-    .interns {
-      display: flex;
+    /* ── Footer (skills + community) ── */
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
       gap: 4mm;
+      margin-top: 2mm;
     }
 
-    .intern-item {
-      flex: 1;
-    }
-
-    .intern-title {
+    .footer-block h3 {
       font-size: 8pt;
       font-weight: 700;
-      color: #1a1a1a;
-    }
-
-    .intern-company {
-      font-size: 7.5pt;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
       color: #1e3a5f;
-      font-weight: 600;
+      margin-bottom: 1.5mm;
     }
 
-    .intern-period {
-      font-size: 7pt;
-      color: #666;
+    .skill-row {
+      margin-bottom: 1mm;
     }
 
-    .intern-detail {
+    .skill-label {
+      font-size: 7.5pt;
+      font-weight: 700;
+      color: #555;
+    }
+
+    .skill-value {
       font-size: 7.5pt;
       color: #333;
-      margin-top: 1mm;
-      line-height: 1.35;
+    }
+
+    .footer-item {
+      font-size: 7.5pt;
+      color: #333;
+      margin-bottom: 1mm;
+      line-height: 1.4;
     }
 
     @media print {
       body { margin: 0; }
-      .page {
-        width: 210mm;
-        min-height: 297mm;
-        margin: 0;
-      }
-      @page {
-        size: A4;
-        margin: 0;
-      }
+      .page { margin: 0; }
+      @page { size: A4; margin: 0; }
     }
   </style>
 </head>
 <body>
 <div class="page">
 
-  <!-- ── Sidebar ── -->
-  <div class="sidebar">
-    <h1>Atsuhiro<br>Uchida</h1>
-    <div class="subtitle">AI Engineer /<br>Software Engineer</div>
-
-    <div class="sidebar-section">
-      <h2>Contact</h2>
-      <div class="contact-item">atsuhiro.uchida.a2@gmail.com</div>
-      <div class="contact-item"><a href="https://linkedin.com/in/atsuhiro-uchida">linkedin.com/in/atsuhiro-uchida</a></div>
-      <div class="contact-item"><a href="https://github.com/timtoronto634">github.com/timtoronto634</a></div>
-      <div class="contact-item"><a href="https://timtoronto634.github.io">timtoronto634.github.io</a></div>
-    </div>
-
-    <div class="sidebar-section">
-      <h2>Skills</h2>
-      <div class="skill-group">
-        <div class="skill-group-label">Languages</div>
-        <div class="skill-tags">
-          <span class="skill-tag">Python</span>
-          <span class="skill-tag">Go</span>
-          <span class="skill-tag">TypeScript</span>
-          <span class="skill-tag">Ruby</span>
-        </div>
+  <!-- ── Header ── -->
+  <div class="header">
+    <div class="header-top">
+      <div>
+        <h1>Atsuhiro Uchida</h1>
+        <div class="title">AI Engineer / Software Engineer</div>
       </div>
-      <div class="skill-group">
-        <div class="skill-group-label">AI / ML</div>
-        <div class="skill-tags">
-          <span class="skill-tag">AWS Bedrock</span>
-          <span class="skill-tag">Prompt Eng.</span>
-          <span class="skill-tag">PyTorch</span>
-        </div>
+      <div class="header-contacts">
+        atsuhiro.uchida.a2@gmail.com<br>
+        <a href="https://linkedin.com/in/atsuhiro-uchida">linkedin.com/in/atsuhiro-uchida</a><br>
+        <a href="https://github.com/timtoronto634">github.com/timtoronto634</a><br>
+        <a href="https://timtoronto634.github.io">timtoronto634.github.io</a>
       </div>
-      <div class="skill-group">
-        <div class="skill-group-label">Cloud & Infra</div>
-        <div class="skill-tags">
-          <span class="skill-tag">GCP</span>
-          <span class="skill-tag">AWS</span>
-          <span class="skill-tag">Docker</span>
-          <span class="skill-tag">Terraform</span>
-          <span class="skill-tag">Kubernetes</span>
-          <span class="skill-tag">CI/CD</span>
-        </div>
-      </div>
-      <div class="skill-group">
-        <div class="skill-group-label">Frameworks</div>
-        <div class="skill-tags">
-          <span class="skill-tag">Rails</span>
-          <span class="skill-tag">React</span>
-          <span class="skill-tag">Django</span>
-          <span class="skill-tag">Next.js</span>
-        </div>
-      </div>
-    </div>
-
-    <div class="sidebar-section">
-      <h2>Community</h2>
-      <div class="community-item">AWS Community Builder<br><span style="font-size:7pt;color:#a8c4e0">Mar 2025 – Present</span></div>
-      <div class="community-item" style="margin-top:2mm">AWS re:Invent 2023 &amp; 2024<br><span style="font-size:7pt;color:#a8c4e0">Las Vegas</span></div>
-      <div class="community-item" style="margin-top:2mm">Go Conference Japan 2024<br><span style="font-size:7pt;color:#a8c4e0">Volunteer Staff</span></div>
-    </div>
-
-    <div class="sidebar-section">
-      <h2>Languages</h2>
-      <div class="community-item">Japanese — Native</div>
-      <div class="community-item">English — Professional</div>
     </div>
   </div>
 
-  <!-- ── Main ── -->
-  <div class="main">
+  <!-- ── Work Experience ── -->
+  <div class="section">
+    <div class="section-title">Work Experience</div>
 
-    <div class="section">
-      <div class="section-title">Work Experience</div>
-
-      <div class="job">
-        <div class="job-header">
-          <div class="job-title">GTM Engineer | AI Engineer</div>
-          <div class="job-period">May 2025 – Present</div>
-        </div>
-        <div class="job-company">Kaminashi Inc. · Tokyo, Japan</div>
-        <ul>
-          <li>Conducted stakeholder interviews with sales reps to map field information needs, then built a pre-meeting briefing tool that auto-summarizes historical deal data, reducing first-meeting preparation time from 3 hours to 30 minutes</li>
-          <li>Architected a sales data platform integrating HubSpot CRM and Zoom Revenue Accelerator via REST APIs; enabled AI-driven meeting transcript analysis and automated reporting, cutting post-meeting documentation and follow-up material creation by 60%</li>
-          <li>Drove workflow automation by building Google Apps Script macros and Chrome extensions as low-cost alternatives to custom infrastructure; piloted tools with early adopters, then provided hands-on onboarding to drive adoption — applying a consistent build-vs-leverage framework based on user mindshare and incremental cost</li>
-        </ul>
+    <div class="job">
+      <div class="job-header">
+        <div class="job-title">GTM Engineer | AI Engineer</div>
+        <div class="job-period">May 2025 – Present</div>
       </div>
+      <div class="job-company">Kaminashi Inc. · Tokyo, Japan</div>
+      <ul>
+        <li>Conducted stakeholder interviews with sales reps to map field information needs, then built a pre-meeting briefing tool that auto-summarizes historical deal data, reducing first-meeting preparation time from 3 hours to 30 minutes</li>
+        <li>Architected a sales data platform integrating HubSpot CRM and Zoom Revenue Accelerator via REST APIs; enabled AI-driven meeting transcript analysis and automated reporting, cutting post-meeting documentation and follow-up material creation by 60%</li>
+        <li>Drove workflow automation by building Google Apps Script macros and Chrome extensions as low-cost alternatives to custom infrastructure; piloted tools with early adopters, then provided hands-on onboarding to drive adoption — applying a consistent build-vs-leverage framework based on user mindshare and incremental cost</li>
+      </ul>
+    </div>
 
-      <div class="job">
-        <div class="job-header">
-          <div class="job-title">Fullstack Engineer — Go / TypeScript</div>
-          <div class="job-period">May 2023 – Apr 2025</div>
-        </div>
-        <div class="job-company">Kaminashi Inc. · Tokyo, Japan</div>
-        <ul>
-          <li>Led design, infrastructure setup, and backend development for new product launches; articulated user value to reduce time-to-delivery</li>
-          <li>Automated CI/CD pipelines and implemented OIDC authentication flows (client & resource-server), resolving key delivery bottlenecks</li>
-        </ul>
+    <div class="job">
+      <div class="job-header">
+        <div class="job-title">Fullstack Engineer — Go / TypeScript</div>
+        <div class="job-period">May 2023 – Apr 2025</div>
       </div>
+      <div class="job-company">Kaminashi Inc. · Tokyo, Japan</div>
+      <ul>
+        <li>Led design, infrastructure setup, and backend development for new product launches; articulated user value to align stakeholders and reduce time-to-delivery</li>
+        <li>Automated CI/CD pipelines and implemented OIDC authentication flows (client &amp; resource-server), resolving key delivery bottlenecks</li>
+      </ul>
+    </div>
 
-      <div class="job">
-        <div class="job-header">
-          <div class="job-title">Backend Engineer — Ruby / Go</div>
-          <div class="job-period">Apr 2022 – May 2023</div>
-        </div>
-        <div class="job-company">freee Inc. · Tokyo, Japan</div>
-        <ul>
-          <li>Introduced Amazon ElastiCache for a high-load gRPC endpoint, reducing peak DB load from 90% to 10%</li>
-          <li>Improved Selenium workflow by caching browser profiles on AWS S3, raising sync success rate from 45% to 70%</li>
-          <li>Streamlined incident response by building reusable analysis queries and escalation criteria, shortening resolution cycle from 2 months to 2 weeks</li>
-          <li>Shipped e-commerce upload feature as emergency recovery, releasing in time for 1,000+ companies to file tax returns</li>
-        </ul>
+    <div class="job">
+      <div class="job-header">
+        <div class="job-title">Backend Engineer — Ruby / Go</div>
+        <div class="job-period">Apr 2022 – May 2023</div>
       </div>
+      <div class="job-company">freee Inc. · Tokyo, Japan</div>
+      <ul>
+        <li>Introduced Amazon ElastiCache for a high-load gRPC endpoint, reducing peak DB load from 90% to 10%</li>
+        <li>Improved Selenium workflow by caching browser profiles on AWS S3, raising sync success rate from 45% to 70%</li>
+        <li>Streamlined incident response by building reusable analysis queries and escalation criteria, shortening resolution cycle from 2 months to 2 weeks</li>
+        <li>Shipped e-commerce upload feature as emergency recovery, releasing in time for 1,000+ companies to file tax returns</li>
+      </ul>
+    </div>
 
-      <div class="job">
-        <div class="section-title" style="margin-bottom:2mm">Internships</div>
-        <div class="interns">
-          <div class="intern-item">
+    <div class="job">
+      <div class="section-title" style="margin-top:1mm;margin-bottom:2mm">Internships</div>
+      <div class="interns-grid">
+        <div class="intern-item">
+          <div class="intern-header">
             <div class="intern-title">AI / Software Engineer Intern</div>
-            <div class="intern-company">NABLAS Inc.</div>
             <div class="intern-period">Sep 2020 – Mar 2021</div>
-            <div class="intern-detail">Added CV problem sets to PyGrade educational platform (WebAssembly/pyodide); deployed audio recognition AI on Azure, contributing to a closed deal</div>
           </div>
-          <div class="intern-item">
+          <div class="intern-company">NABLAS Inc. · Tokyo</div>
+          <div class="intern-detail">Added CV problem sets to PyGrade educational platform (WebAssembly/pyodide); deployed audio recognition AI on Azure, contributing to a closed deal</div>
+        </div>
+        <div class="intern-item">
+          <div class="intern-header">
             <div class="intern-title">ML Engineer Intern</div>
-            <div class="intern-company">DMM Games</div>
             <div class="intern-period">Feb 2020 – May 2020</div>
-            <div class="intern-detail">Redesigned data flow of a game recommendation system on GCP, reducing unnecessary scans and lowering infrastructure cost</div>
           </div>
+          <div class="intern-company">DMM Games · Tokyo</div>
+          <div class="intern-detail">Redesigned data flow of a game recommendation system on GCP, reducing unnecessary scans and lowering infrastructure cost</div>
         </div>
       </div>
     </div>
-
-    <div class="section">
-      <div class="section-title">Education</div>
-      <div class="edu-item">
-        <div class="edu-header">
-          <div class="edu-degree">MSc, Computer Science</div>
-          <div class="edu-period">Apr 2019 – Mar 2021</div>
-        </div>
-        <div class="edu-institution">Waseda University · Tokyo, Japan</div>
-        <div class="edu-detail">CNN architecture research · Managed 20+ GPU servers · Designed distributed experiment pipelines with PostgreSQL &amp; Redash</div>
-      </div>
-      <div class="edu-item">
-        <div class="edu-header">
-          <div class="edu-degree">International Student Exchange</div>
-          <div class="edu-period">Sep 2016 – Apr 2017</div>
-        </div>
-        <div class="edu-institution">University of Toronto Scarborough · Toronto, Canada</div>
-      </div>
-    </div>
-
   </div>
+
+  <!-- ── Education ── -->
+  <div class="section">
+    <div class="section-title">Education</div>
+    <div class="edu-item">
+      <div class="edu-header">
+        <div class="edu-degree">MSc, Computer Science</div>
+        <div class="edu-period">Apr 2019 – Mar 2021</div>
+      </div>
+      <div class="edu-institution">Waseda University · Tokyo, Japan</div>
+      <div class="edu-detail">CNN architecture research · Managed 20+ GPU servers · Distributed experiment pipelines with PostgreSQL &amp; Redash</div>
+    </div>
+    <div class="edu-item">
+      <div class="edu-header">
+        <div class="edu-degree">International Student Exchange</div>
+        <div class="edu-period">Sep 2016 – Apr 2017</div>
+      </div>
+      <div class="edu-institution">University of Toronto Scarborough · Toronto, Canada</div>
+    </div>
+  </div>
+
+  <!-- ── Skills + Community (footer) ── -->
+  <div class="footer-grid">
+    <div class="footer-block">
+      <h3>Languages &amp; Frameworks</h3>
+      <div class="skill-row"><span class="skill-value">Python, Go, TypeScript, Ruby</span></div>
+      <div class="skill-row"><span class="skill-value">Rails, React, Next.js, Django</span></div>
+    </div>
+    <div class="footer-block">
+      <h3>Cloud &amp; Infra</h3>
+      <div class="skill-row"><span class="skill-value">GCP, AWS, Docker, Terraform</span></div>
+      <div class="skill-row"><span class="skill-value">Kubernetes, CI/CD, AWS Bedrock</span></div>
+    </div>
+    <div class="footer-block">
+      <h3>Community</h3>
+      <div class="footer-item">AWS Community Builder (Mar 2025 – Mar 2026)</div>
+      <div class="footer-item">AWS re:Invent 2023 &amp; 2024 · Las Vegas</div>
+      <div class="footer-item">Go Conference Japan 2024 (Volunteer)</div>
+    </div>
+  </div>
+
 </div>
 </body>
 </html>
