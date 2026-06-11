@@ -1,0 +1,46 @@
+name: Resume PDF Preview
+
+on:
+  pull_request:
+    paths:
+      - 'resume.html'
+      - 'docs/resume.html'
+  push:
+    branches:
+      - master
+    paths:
+      - 'resume.html'
+      - 'docs/resume.html'
+
+jobs:
+  preview:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install dependencies
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq poppler-utils
+          pip install weasyprint --quiet
+
+      - name: Generate PDF
+        run: python3 -m weasyprint docs/resume.html resume-preview.pdf
+
+      - name: Convert PDF to PNG
+        run: pdftoppm -r 150 -png resume-preview.pdf resume-preview
+
+      - name: Check page count
+        run: |
+          COUNT=$(ls resume-preview-*.png | wc -l)
+          echo "Pages: $COUNT"
+          if [ "$COUNT" -gt 1 ]; then
+            echo "::warning::Resume exceeds 1 page ($COUNT pages detected)"
+          fi
+
+      - name: Upload preview
+        uses: actions/upload-artifact@v4
+        with:
+          name: resume-preview
+          path: resume-preview-*.png
+          retention-days: 14
