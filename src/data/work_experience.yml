@@ -4,20 +4,19 @@ experience:
     location: "Tokyo, Japan"
     period: "May 2025 - Current"
     details:
-      - "Partner with business teams to find high-impact AI use cases and ship prototypes that boost productivity"
-      - "Deliver AI-assisted workflows with guardrails, connecting LLM tooling to internal systems safely"
-      - "Coach non-engineering staff on prompt patterns and reusable templates, accelerating team self-service"
-      - "Measure adoption and iterate with business leads to prioritize the next AI enablement backlog"
+      - "Conducted stakeholder interviews with sales reps to map field information needs, then built a pre-meeting briefing tool powered by AWS Bedrock LLM API that auto-summarizes historical deal data — reducing first-meeting preparation time from 30 to 10 minutes while improving the quality and coverage of pre-call research"
+      - "Architected a sales data platform integrating HubSpot CRM and Zoom Revenue Accelerator via REST APIs; enabled AI-driven meeting transcript analysis and automated reporting, cutting post-meeting documentation and follow-up material creation by 60%"
+      - "As the sole AI engineer, designed and shipped automation tools (Google Apps Script, Chrome extensions, LLM integrations) by deliberately choosing low-maintenance solutions over custom infrastructure — maximizing impact per headcount while driving adoption through direct onboarding with end users"
 
   - position: "Fullstack Engineer - Go/TypeScript"
     company: "Kaminashi Inc."
     location: "Tokyo, Japan"
     period: "May 2023 - April 2025"
     details:
-      - "Led the design, infrastructure setup, and backend development for new product launches"
-      - "Guided the service team by articulating user value and identifying minimum requirements, minimizing time to delivery"
-      - "Continuously identified and resolved development bottlenecks by automating CI/CD pipelines and leveraging code generation to accelerate delivery"
-      - "Collaborated on a separate project adhering to OIDC specifications, implementing authentication flows as a client and enabling access token validation on the resource server"
+      - "Led end-to-end development of new products — from system design and infrastructure setup to backend implementation — while working with stakeholders to define minimum viable scope and accelerate time-to-delivery"
+      - "Eliminated delivery bottlenecks by automating CI/CD pipelines and introducing code generation tooling, consistently reducing build and release cycle times"
+      - "Implemented OIDC-compliant authentication flows across two services: client-side authorization and resource-server token validation, enabling secure cross-service access"
+      - "Partnered with a PM on factory-floor visits to interview site managers and frontline workers, directly observing operations to surface pain points invisible in stakeholder interviews — translated root-cause findings into product features rather than building to spec"
 
   - position: "Backend Engineer - Ruby/Go"
     company: "freee Inc."
