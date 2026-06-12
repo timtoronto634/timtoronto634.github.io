@@ -1,395 +1,494 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Atsuhiro Uchida – Resume</title>
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  <head>
+    <meta charset="UTF-8" />
+    <title>Atsuhiro Uchida – Resume</title>
+    <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
 
-    body {
-      font-family: 'Helvetica Neue', Arial, sans-serif;
-      font-size: 9.5pt;
-      color: #1a1a1a;
-      background: #fff;
-      line-height: 1.45;
-    }
+      body {
+        font-family: 'Helvetica Neue', Arial, sans-serif;
+        font-size: 9.5pt;
+        color: #1a1a1a;
+        background: #fff;
+        line-height: 1.45;
+      }
 
-    .page {
-      width: 210mm;
-      min-height: 297mm;
-      margin: 0 auto;
-      padding: 8mm 13mm 6mm 13mm;
-    }
+      .page {
+        width: 210mm;
+        min-height: 297mm;
+        margin: 0 auto;
+        padding: 8mm 13mm 6mm 13mm;
+      }
 
-    /* ── Header ── */
-    .header {
-      border-bottom: 2px solid #1e3a5f;
-      padding-bottom: 3mm;
-      margin-bottom: 4mm;
-    }
+      /* ── Header ── */
+      .header {
+        border-bottom: 2px solid #1e3a5f;
+        padding-bottom: 3mm;
+        margin-bottom: 4mm;
+      }
 
-    .header-top {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-end;
-    }
+      .header-top {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+      }
 
-    .header h1 {
-      font-size: 20pt;
-      font-weight: 700;
-      color: #1e3a5f;
-      letter-spacing: -0.01em;
-    }
+      .header h1 {
+        font-size: 20pt;
+        font-weight: 700;
+        color: #1e3a5f;
+        letter-spacing: -0.01em;
+      }
 
-    .header .title {
-      font-size: 10pt;
-      color: #555;
-      margin-top: 1mm;
-    }
+      .header .title {
+        font-size: 10pt;
+        color: #555;
+        margin-top: 1mm;
+      }
 
-    .header-contacts {
-      text-align: right;
-      font-size: 8pt;
-      color: #444;
-      line-height: 1.6;
-    }
+      .header-contacts {
+        text-align: right;
+        font-size: 8pt;
+        color: #444;
+        line-height: 1.6;
+      }
 
-    .header-contacts a {
-      color: #444;
-      text-decoration: none;
-    }
+      .header-contacts a {
+        color: #444;
+        text-decoration: none;
+      }
 
-    /* ── Summary ── */
-    .summary {
-      font-size: 8.5pt;
-      color: #333;
-      line-height: 1.45;
-      margin-bottom: 4mm;
-    }
+      /* ── Summary ── */
+      .summary {
+        font-size: 8.5pt;
+        color: #333;
+        line-height: 1.45;
+        margin-bottom: 4mm;
+      }
 
-    /* ── Sections ── */
-    .section {
-      margin-bottom: 4mm;
-    }
+      /* ── Sections ── */
+      .section {
+        margin-bottom: 4mm;
+      }
 
-    .section-title {
-      font-size: 9pt;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      color: #1e3a5f;
-      border-bottom: 1px solid #1e3a5f;
-      padding-bottom: 1mm;
-      margin-bottom: 2.5mm;
-    }
+      .section-title {
+        font-size: 9pt;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        color: #1e3a5f;
+        border-bottom: 1px solid #1e3a5f;
+        padding-bottom: 1mm;
+        margin-bottom: 2.5mm;
+      }
 
-    /* ── Job entries ── */
-    .job {
-      margin-bottom: 3mm;
-    }
+      /* ── Job entries ── */
+      .job {
+        margin-bottom: 3mm;
+      }
 
-    .job-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: baseline;
-    }
+      .job-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+      }
 
-    .job-title {
-      font-size: 9.5pt;
-      font-weight: 700;
-      color: #1a1a1a;
-    }
+      .job-title {
+        font-size: 9.5pt;
+        font-weight: 700;
+        color: #1a1a1a;
+      }
 
-    .job-period {
-      font-size: 8pt;
-      color: #666;
-      white-space: nowrap;
-    }
+      .job-period {
+        font-size: 8pt;
+        color: #666;
+        white-space: nowrap;
+      }
 
-    .job-company {
-      font-size: 8.5pt;
-      color: #1e3a5f;
-      font-weight: 600;
-      margin-bottom: 1.5mm;
-    }
+      .job-company {
+        font-size: 8.5pt;
+        color: #1e3a5f;
+        font-weight: 600;
+        margin-bottom: 1.5mm;
+      }
 
-    .job ul {
-      padding-left: 0;
-      list-style: none;
-    }
+      .job ul {
+        padding-left: 0;
+        list-style: none;
+      }
 
-    .job ul li {
-      font-size: 8.5pt;
-      color: #222;
-      margin-bottom: 1mm;
-      padding-left: 4mm;
-      position: relative;
-      line-height: 1.35;
-    }
+      .job ul li {
+        font-size: 8.5pt;
+        color: #222;
+        margin-bottom: 1mm;
+        padding-left: 4mm;
+        position: relative;
+        line-height: 1.35;
+      }
 
-    .job ul li::before {
-      content: '▸';
-      position: absolute;
-      left: 0;
-      color: #1e3a5f;
-      font-size: 7pt;
-      top: 1px;
-    }
+      .job ul li::before {
+        content: '▸';
+        position: absolute;
+        left: 0;
+        color: #1e3a5f;
+        font-size: 7pt;
+        top: 1px;
+      }
 
-    /* ── Internships side by side ── */
-    .interns-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 4mm;
-    }
+      /* ── Internships side by side ── */
+      .interns-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 4mm;
+      }
 
-    .intern-item .intern-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: baseline;
-    }
+      .intern-item .intern-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+      }
 
-    .intern-title {
-      font-size: 8.5pt;
-      font-weight: 700;
-    }
+      .intern-title {
+        font-size: 8.5pt;
+        font-weight: 700;
+      }
 
-    .intern-period {
-      font-size: 7.5pt;
-      color: #666;
-    }
+      .intern-period {
+        font-size: 7.5pt;
+        color: #666;
+      }
 
-    .intern-company {
-      font-size: 8pt;
-      color: #1e3a5f;
-      font-weight: 600;
-      margin-bottom: 1mm;
-    }
+      .intern-company {
+        font-size: 8pt;
+        color: #1e3a5f;
+        font-weight: 600;
+        margin-bottom: 1mm;
+      }
 
-    .intern-detail {
-      font-size: 8pt;
-      color: #333;
-      padding-left: 4mm;
-      position: relative;
-      line-height: 1.4;
-    }
+      .intern-detail {
+        font-size: 8pt;
+        color: #333;
+        padding-left: 4mm;
+        position: relative;
+        line-height: 1.4;
+      }
 
-    .intern-detail::before {
-      content: '▸';
-      position: absolute;
-      left: 0;
-      color: #1e3a5f;
-      font-size: 7pt;
-      top: 1px;
-    }
+      .intern-detail::before {
+        content: '▸';
+        position: absolute;
+        left: 0;
+        color: #1e3a5f;
+        font-size: 7pt;
+        top: 1px;
+      }
 
-    /* ── Education ── */
-    .edu-item {
-      margin-bottom: 2mm;
-    }
+      /* ── Education ── */
+      .edu-item {
+        margin-bottom: 2mm;
+      }
 
-    .edu-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: baseline;
-    }
+      .edu-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+      }
 
-    .edu-degree {
-      font-size: 9pt;
-      font-weight: 700;
-    }
+      .edu-degree {
+        font-size: 9pt;
+        font-weight: 700;
+      }
 
-    .edu-period {
-      font-size: 8pt;
-      color: #666;
-    }
+      .edu-period {
+        font-size: 8pt;
+        color: #666;
+      }
 
-    .edu-institution {
-      font-size: 8.5pt;
-      color: #1e3a5f;
-      font-weight: 600;
-    }
+      .edu-institution {
+        font-size: 8.5pt;
+        color: #1e3a5f;
+        font-weight: 600;
+      }
 
-    .edu-detail {
-      font-size: 8pt;
-      color: #555;
-      margin-top: 0.5mm;
-      padding-left: 4mm;
-    }
+      .edu-detail {
+        font-size: 8pt;
+        color: #555;
+        margin-top: 0.5mm;
+        padding-left: 4mm;
+      }
 
-    /* ── Footer (skills + community) ── */
-    .footer-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      gap: 4mm;
-      margin-top: 2mm;
-    }
+      /* ── Footer (skills + community) ── */
+      .footer-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 4mm;
+        margin-top: 2mm;
+      }
 
-    .footer-block h3 {
-      font-size: 8pt;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      color: #1e3a5f;
-      margin-bottom: 1.5mm;
-    }
+      .footer-block h3 {
+        font-size: 8pt;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        color: #1e3a5f;
+        margin-bottom: 1.5mm;
+      }
 
-    .skill-row {
-      margin-bottom: 1mm;
-    }
+      .skill-row {
+        margin-bottom: 1mm;
+      }
 
-    .skill-label {
-      font-size: 7.5pt;
-      font-weight: 700;
-      color: #555;
-    }
+      .skill-label {
+        font-size: 7.5pt;
+        font-weight: 700;
+        color: #555;
+      }
 
-    .skill-value {
-      font-size: 7.5pt;
-      color: #333;
-    }
+      .skill-value {
+        font-size: 7.5pt;
+        color: #333;
+      }
 
-    .footer-item {
-      font-size: 7.5pt;
-      color: #333;
-      margin-bottom: 1mm;
-      line-height: 1.4;
-    }
+      .footer-item {
+        font-size: 7.5pt;
+        color: #333;
+        margin-bottom: 1mm;
+        line-height: 1.4;
+      }
 
-    @media print {
-      body { margin: 0; }
-      .page { margin: 0; }
-      @page { size: A4; margin: 0; }
-    }
-  </style>
-</head>
-<body>
-<div class="page">
-
-  <!-- ── Header ── -->
-  <div class="header">
-    <div class="header-top">
-      <div>
-        <h1>Atsuhiro Uchida</h1>
-        <div class="title">AI Engineer / Software Engineer</div>
-      </div>
-      <div class="header-contacts">
-        atsuhiro.uchida.a2@gmail.com<br>
-        <a href="https://linkedin.com/in/atsuhiro-uchida">linkedin.com/in/atsuhiro-uchida</a><br>
-        <a href="https://github.com/timtoronto634">github.com/timtoronto634</a><br>
-        <a href="https://timtoronto634.github.io">timtoronto634.github.io</a>
-      </div>
-    </div>
-  </div>
-
-  <!-- ── Summary ── -->
-  <div class="summary">
-    AI engineer who ships LLM-powered tools end-to-end — from field interviews with sales reps and factory-floor visits to production deployment and user onboarding. Five years of backend/fullstack engineering (Go, TypeScript, Ruby) underpin rapid AI prototyping as the sole AI engineer embedded in a sales organization.
-  </div>
-
-  <!-- ── Work Experience ── -->
-  <div class="section">
-    <div class="section-title">Work Experience</div>
-
-    <div class="job">
-      <div class="job-header">
-        <div class="job-title">GTM Engineer | AI Engineer</div>
-        <div class="job-period">May 2025 – Present</div>
-      </div>
-      <div class="job-company">Kaminashi Inc. · Tokyo, Japan</div>
-      <ul>
-        <li>Conducted stakeholder interviews with sales reps to map field information needs, then built a pre-meeting briefing tool powered by AWS Bedrock LLM API that auto-summarizes historical deal data — cutting first-meeting prep from 30 to 10 minutes and reclaiming 100+ hours/month across a 25-rep field sales team</li>
-        <li>Architected a sales data platform integrating HubSpot CRM and Zoom Revenue Accelerator via REST APIs; enabled AI-driven meeting transcript analysis and automated reporting, cutting post-meeting documentation and follow-up material creation by 60%</li>
-        <li>Built an LLM-powered handoff-memo generator for inside sales, replacing 15 minutes of daily manual writing per rep — saving the 10-person team ~50 hours/month</li>
-        <li>As the sole AI engineer embedded in the sales organization, designed and shipped automation tools (Google Apps Script, Chrome extensions, LLM integrations), deliberately choosing low-maintenance solutions over custom infrastructure — built in as little as one day, in reps' hands the following week, adopted by 20+ sales reps through direct onboarding</li>
-      </ul>
-    </div>
-
-    <div class="job">
-      <div class="job-header">
-        <div class="job-title">Fullstack Engineer — Go / TypeScript</div>
-        <div class="job-period">May 2023 – Apr 2025</div>
-      </div>
-      <div class="job-company">Kaminashi Inc. · Tokyo, Japan</div>
-      <ul>
-        <li>Led 0→1 development of Kaminashi Employee, an HR management product for frontline workers — from system design and infrastructure setup to backend implementation — while working with stakeholders to define minimum viable scope and accelerate time-to-delivery</li>
-        <li>Implemented OIDC-compliant authentication flows across two services: client-side authorization and resource-server token validation, enabling secure cross-service access</li>
-        <li>Partnered with a PM on factory-floor visits to interview site managers and frontline workers, directly observing operations to surface pain points invisible in stakeholder interviews — translated root-cause findings into product features rather than building to spec</li>
-      </ul>
-    </div>
-
-    <div class="job">
-      <div class="job-header">
-        <div class="job-title">Backend Engineer — Ruby / Go</div>
-        <div class="job-period">Apr 2021 – May 2023</div>
-      </div>
-      <div class="job-company">freee Inc. · Tokyo, Japan</div>
-      <ul>
-        <li>Introduced Amazon ElastiCache for a high-load gRPC endpoint, reducing peak DB load from 90% to 10%</li>
-        <li>Improved Selenium workflow by caching browser profiles on AWS S3, raising sync success rate from 45% to 70%</li>
-        <li>Streamlined incident response by building reusable analysis queries and escalation criteria, shortening resolution cycle from 2 months to 2 weeks</li>
-        <li>Shipped e-commerce upload feature as emergency recovery, releasing in time for 1,000+ companies to file tax returns</li>
-      </ul>
-    </div>
-
-    <div class="job">
-      <div class="section-title" style="margin-top:1mm;margin-bottom:2mm">Internships</div>
-      <div class="interns-grid">
-        <div class="intern-item">
-          <div class="intern-header">
-            <div class="intern-title">AI / Software Engineer Intern</div>
-            <div class="intern-period">Sep 2020 – Mar 2021</div>
+      @media print {
+        body {
+          margin: 0;
+        }
+        .page {
+          margin: 0;
+        }
+        @page {
+          size: A4;
+          margin: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page">
+      <!-- ── Header ── -->
+      <div class="header">
+        <div class="header-top">
+          <div>
+            <h1>Atsuhiro Uchida</h1>
+            <div class="title">AI Engineer / Software Engineer</div>
           </div>
-          <div class="intern-company">NABLAS Inc. · Tokyo</div>
-          <div class="intern-detail">Added CV problem sets to PyGrade educational platform (WebAssembly/pyodide); deployed audio recognition AI on Azure, contributing to a closed deal</div>
-        </div>
-        <div class="intern-item">
-          <div class="intern-header">
-            <div class="intern-title">ML Engineer Intern</div>
-            <div class="intern-period">Feb 2020 – May 2020</div>
+          <div class="header-contacts">
+            atsuhiro.uchida.a2@gmail.com<br />
+            <a href="https://linkedin.com/in/atsuhiro-uchida">linkedin.com/in/atsuhiro-uchida</a
+            ><br />
+            <a href="https://github.com/timtoronto634">github.com/timtoronto634</a><br />
+            <a href="https://timtoronto634.github.io">timtoronto634.github.io</a>
           </div>
-          <div class="intern-company">DMM Games · Tokyo</div>
-          <div class="intern-detail">Redesigned data flow of a game recommendation system on GCP, reducing unnecessary scans and lowering infrastructure cost</div>
         </div>
       </div>
-    </div>
-  </div>
 
-  <!-- ── Education ── -->
-  <div class="section">
-    <div class="section-title">Education</div>
-    <div class="edu-item">
-      <div class="edu-header">
-        <div class="edu-degree">MSc, Computer Science</div>
-        <div class="edu-period">Apr 2019 – Mar 2021</div>
+      <!-- ── Summary ── -->
+      <div class="summary">
+        AI engineer who ships LLM-powered tools end-to-end — from field interviews with sales reps
+        and factory-floor visits to production deployment and user onboarding. Five years of
+        backend/fullstack engineering (Go, TypeScript, Ruby) underpin rapid AI prototyping as the
+        sole AI engineer embedded in a sales organization.
       </div>
-      <div class="edu-institution">Waseda University · Tokyo, Japan</div>
-      <div class="edu-detail">Researched interpretability of CNN architectures via correlation analysis of image noise reduction scores across methods · Designed distributed experiment pipelines across 20+ GPU servers, logging results to PostgreSQL and visualizing in Redash</div>
-    </div>
-    <div class="edu-item">
-      <div class="edu-header">
-        <div class="edu-degree">International Student Exchange</div>
-        <div class="edu-period">Sep 2016 – Apr 2017</div>
+
+      <!-- ── Work Experience ── -->
+      <div class="section">
+        <div class="section-title">Work Experience</div>
+
+        <div class="job">
+          <div class="job-header">
+            <div class="job-title">GTM Engineer | AI Engineer</div>
+            <div class="job-period">May 2025 – Present</div>
+          </div>
+          <div class="job-company">Kaminashi Inc. · Tokyo, Japan</div>
+          <ul>
+            <li>
+              Conducted stakeholder interviews with sales reps to map field information needs, then
+              built a pre-meeting briefing tool powered by AWS Bedrock LLM API that auto-summarizes
+              historical deal data — cutting first-meeting prep from 30 to 10 minutes and reclaiming
+              100+ hours/month across a 25-rep field sales team
+            </li>
+            <li>
+              Architected a sales data platform integrating HubSpot CRM and Zoom Revenue Accelerator
+              via REST APIs; enabled AI-driven meeting transcript analysis and automated reporting,
+              cutting post-meeting documentation and follow-up material creation by 60%
+            </li>
+            <li>
+              Built an LLM-powered handoff-memo generator for inside sales, replacing 15 minutes of
+              daily manual writing per rep — saving the 10-person team ~50 hours/month
+            </li>
+            <li>
+              As the sole AI engineer embedded in the sales organization, designed and shipped
+              automation tools (Google Apps Script, Chrome extensions, LLM integrations),
+              deliberately choosing low-maintenance solutions over custom infrastructure — built in
+              as little as one day, in reps' hands the following week, adopted by 20+ sales reps
+              through direct onboarding
+            </li>
+          </ul>
+        </div>
+
+        <div class="job">
+          <div class="job-header">
+            <div class="job-title">Fullstack Engineer — Go / TypeScript</div>
+            <div class="job-period">May 2023 – Apr 2025</div>
+          </div>
+          <div class="job-company">Kaminashi Inc. · Tokyo, Japan</div>
+          <ul>
+            <li>
+              Led 0→1 development of Kaminashi Employee, an HR management product for frontline
+              workers — from system design and infrastructure setup to backend implementation —
+              while working with stakeholders to define minimum viable scope and accelerate
+              time-to-delivery
+            </li>
+            <li>
+              Implemented OIDC-compliant authentication flows across two services: client-side
+              authorization and resource-server token validation, enabling secure cross-service
+              access
+            </li>
+            <li>
+              Partnered with a PM on factory-floor visits to interview site managers and frontline
+              workers, directly observing operations to surface pain points invisible in stakeholder
+              interviews — translated root-cause findings into product features rather than building
+              to spec
+            </li>
+          </ul>
+        </div>
+
+        <div class="job">
+          <div class="job-header">
+            <div class="job-title">Backend Engineer — Ruby / Go</div>
+            <div class="job-period">Apr 2021 – May 2023</div>
+          </div>
+          <div class="job-company">freee Inc. · Tokyo, Japan</div>
+          <ul>
+            <li>
+              Introduced Amazon ElastiCache for a high-load gRPC endpoint, reducing peak DB load
+              from 90% to 10%
+            </li>
+            <li>
+              Improved Selenium workflow by caching browser profiles on AWS S3, raising sync success
+              rate from 45% to 70%
+            </li>
+            <li>
+              Streamlined incident response by building reusable analysis queries and escalation
+              criteria, shortening resolution cycle from 2 months to 2 weeks
+            </li>
+            <li>
+              Shipped e-commerce upload feature as emergency recovery, releasing in time for 1,000+
+              companies to file tax returns
+            </li>
+          </ul>
+        </div>
+
+        <div class="job">
+          <div class="section-title" style="margin-top: 1mm; margin-bottom: 2mm">Internships</div>
+          <div class="interns-grid">
+            <div class="intern-item">
+              <div class="intern-header">
+                <div class="intern-title">AI / Software Engineer Intern</div>
+                <div class="intern-period">Sep 2020 – Mar 2021</div>
+              </div>
+              <div class="intern-company">NABLAS Inc. · Tokyo</div>
+              <div class="intern-detail">
+                Added CV problem sets to PyGrade educational platform (WebAssembly/pyodide);
+                deployed audio recognition AI on Azure, contributing to a closed deal
+              </div>
+            </div>
+            <div class="intern-item">
+              <div class="intern-header">
+                <div class="intern-title">ML Engineer Intern</div>
+                <div class="intern-period">Feb 2020 – May 2020</div>
+              </div>
+              <div class="intern-company">DMM Games · Tokyo</div>
+              <div class="intern-detail">
+                Redesigned data flow of a game recommendation system on GCP, reducing unnecessary
+                scans and lowering infrastructure cost
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="edu-institution">University of Toronto Scarborough · Toronto, Canada</div>
+
+      <!-- ── Education ── -->
+      <div class="section">
+        <div class="section-title">Education</div>
+        <div class="edu-item">
+          <div class="edu-header">
+            <div class="edu-degree">MSc, Computer Science</div>
+            <div class="edu-period">Apr 2019 – Mar 2021</div>
+          </div>
+          <div class="edu-institution">Waseda University · Tokyo, Japan</div>
+          <div class="edu-detail">
+            Researched interpretability of CNN architectures via correlation analysis of image noise
+            reduction scores across methods · Designed distributed experiment pipelines across 20+
+            GPU servers, logging results to PostgreSQL and visualizing in Redash
+          </div>
+        </div>
+        <div class="edu-item">
+          <div class="edu-header">
+            <div class="edu-degree">International Student Exchange</div>
+            <div class="edu-period">Sep 2016 – Apr 2017</div>
+          </div>
+          <div class="edu-institution">University of Toronto Scarborough · Toronto, Canada</div>
+        </div>
+      </div>
+
+      <!-- ── Skills / Community / Languages ── -->
+      <div
+        style="
+          margin-top: 3mm;
+          padding-top: 2mm;
+          border-top: 1px solid #1e3a5f;
+          font-size: 8pt;
+          color: #444;
+        "
+      >
+        <strong
+          style="
+            color: #1e3a5f;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            font-size: 7.5pt;
+          "
+          >Skills</strong
+        >&ensp; Python · Go · TypeScript · LLM APIs (AWS Bedrock, Claude) · AWS / Google Cloud ·
+        HubSpot API · Docker · Terraform
+      </div>
+      <div style="margin-top: 1mm; font-size: 8pt; color: #444">
+        <strong
+          style="
+            color: #1e3a5f;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            font-size: 7.5pt;
+          "
+          >Community</strong
+        >&ensp; AWS Community Builder (2025–2026) · AWS re:Invent 2023 &amp; 2024 · Go Conference
+        Japan 2024 &amp; 2025 (Volunteer)
+      </div>
+      <div style="margin-top: 1mm; font-size: 8pt; color: #444">
+        <strong
+          style="
+            color: #1e3a5f;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            font-size: 7.5pt;
+          "
+          >Languages</strong
+        >&ensp; Japanese (native) · English (business)
+      </div>
     </div>
-  </div>
-
-
-  <!-- ── Skills / Community / Languages ── -->
-  <div style="margin-top:3mm; padding-top:2mm; border-top:1px solid #1e3a5f; font-size:8pt; color:#444;">
-    <strong style="color:#1e3a5f; text-transform:uppercase; letter-spacing:0.08em; font-size:7.5pt;">Skills</strong>&ensp;
-    Python · Go · TypeScript · LLM APIs (AWS Bedrock, Claude) · AWS / Google Cloud · HubSpot API · Docker · Terraform
-  </div>
-  <div style="margin-top:1mm; font-size:8pt; color:#444;">
-    <strong style="color:#1e3a5f; text-transform:uppercase; letter-spacing:0.08em; font-size:7.5pt;">Community</strong>&ensp;
-    AWS Community Builder (2025–2026) · AWS re:Invent 2023 &amp; 2024 · Go Conference Japan 2024 &amp; 2025 (Volunteer)
-  </div>
-  <div style="margin-top:1mm; font-size:8pt; color:#444;">
-    <strong style="color:#1e3a5f; text-transform:uppercase; letter-spacing:0.08em; font-size:7.5pt;">Languages</strong>&ensp;
-    Japanese (native) · English (business)
-  </div>
-
-</div>
-</body>
+  </body>
 </html>
