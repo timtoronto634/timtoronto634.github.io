@@ -27,6 +27,11 @@ personal_blogs:
     language: 'English'
 
 company_blogs:
+  - title: '(Japanese) 「AI で営業生産性を改善」って、実際どうすれば ~GTM×AI のゼロからの 1年間の実践知~'
+    url: 'https://note.com/timtoronto634_a2/n/n4ffcd96b4610'
+    date: '2026-07-17'
+    language: 'Japanese'
+
   - title: '(Japanese) 監視ツールを迷ったら CloudWatch から始めてみるのもありなのでは'
     url: 'https://kaminashi-developer.hatenablog.jp/entry/2024/08/28/080000'
     date: '2024-08-28'
